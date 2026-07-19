@@ -1,0 +1,44 @@
+# Evidence slot query templates for consumer hardware / electronics.
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 参数 OR 规格 OR 产品介绍 OR 技术特性 OR 发布信息"
+    exclude_terms: ["下载", "软件", "app"]
+    freshness: oneMonth
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 价格 OR 售价 OR 发售信息 OR 版本对比 OR 购买渠道"
+    exclude_terms: ["下载", "破解"]
+    freshness: oneMonth
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 用户评价 OR 使用体验 OR 优缺点 OR 投诉 OR 对比评测 OR 拆解"
+    exclude_terms: ["破解", "破解版", "下载站"]
+    freshness: oneMonth
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} 跑分 OR 评测 OR 横向对比 OR 拆解报告 OR 行业榜单"
+    exclude_terms: []
+    freshness: oneYear
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 渠道 OR 销量 OR 市场份额 OR 线上线下 OR 经销商 OR 售后网点"
+    exclude_terms: []
+    freshness: oneMonth
+  supply_chain_signal:
+    dimension: strategic_expansion
+    source_types: [official, leading]
+    template: "{name} 供应链 OR 芯片 OR 代工厂 OR 零部件 OR 产能 OR 备货"
+    exclude_terms: []
+    freshness: oneYear
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 融资 OR 新品规划 OR 专利 OR 跨界 OR 生态布局 OR 收购"
+    exclude_terms: []
+    freshness: oneYear

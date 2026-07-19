@@ -1,0 +1,126 @@
+# Industry routing: keyword-based track → industry_type mapping.
+# Used by resolve_industry() for fast routing before falling back to LLM.
+# Tokens from (track + product_name) are matched against keyword sets;
+# highest overlap wins. Ties break to first listed industry.
+
+routes:
+  - industry: software_saas
+    keywords:
+      - ai
+      - copilot
+      - saas
+      - devtool
+      - 代码
+      - 编程
+      - 开发
+      - 协作工具
+      - 设计工具
+      - api
+      - sdk
+      - 开源
+      - github
+      - devops
+      - 云计算
+      - cloud
+
+  - industry: retail_fmcg
+    keywords:
+      - 奶茶
+      - 咖啡
+      - 餐饮
+      - 茶饮
+      - 美妆
+      - 快消
+      - 零售
+      - 食品
+      - 饮品
+      - 连锁
+      - 加盟
+      - 烘焙
+      - 便利店
+      - 超市
+      - 服饰
+      - 鞋
+      - 母婴
+
+  - industry: automotive
+    keywords:
+      - 新能源
+      - 汽车
+      - 电动
+      - 自动驾驶
+      - 出行
+      - 网约车
+      - 充电
+      - ev
+      - 智驾
+      - 电池
+      - 换电
+
+  - industry: consumer_hardware
+    keywords:
+      - 手机
+      - 穿戴
+      - 无人机
+      - 智能家居
+      - 硬件
+      - 芯片
+      - iot
+      - 耳机
+      - 音箱
+      - 平板
+      - 笔记本
+      - 笔记本
+
+  - industry: gaming
+    keywords:
+      - 游戏
+      - 手游
+      - 电竞
+      - 主机
+      - 二次元
+      - 竞技
+      - mo
+      - mmo
+      - rpg
+      - 电竞
+      - taptap
+      - steam
+
+  - industry: platform_social
+    keywords:
+      - 短视频
+      - 电商
+      - 社交
+      - 直播
+      - 内容平台
+      - 社区
+      - ugc
+      - 创作者
+      - 信息流
+
+  - industry: fintech
+    keywords:
+      - 支付
+      - 金融
+      - 保险
+      - 理财
+      - 银行
+      - 加密
+      - 区块链
+      - defi
+      - 信贷
+      - 券商
+
+  - industry: healthcare
+    keywords:
+      - 医疗
+      - 医药
+      - 临床
+      - 器械
+      - 生物
+      - 医院
+      - 药企
+      - 诊断
+      - 基因
+      - 医保

@@ -1,0 +1,53 @@
+{
+  "company": "OpenAI Codex",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://openai.com/zh-Hans-CN/codex/",
+      "label": "OpenAI Codex 产品主页",
+      "scraped_text": "OpenAI Codex is OpenAI's flagship AI Coding Agent platform, rebuilt as a multi-agent coding command center. It connects into the ChatGPT ecosystem and provides standalone App (macOS/Windows), CLI, and IDE extensions. Core differentiator: multi-agent parallel streams + Computer Use — Codex can autonomously spawn isolated cloud environments, execute multi-file refactors, run tests, and open PRs without human supervision. Key features: Isolated Work Trees & Diffs (AI generates and tests code in cloud sandbox, human reviews diffs and approves), Memories (long-term project context), Automations (scheduled background tasks like CI/CD fix automation, bulk API migrations, automatic issue triage). Positioned as a 'digital employee' rather than a coding assistant."
+    },
+    {
+      "url": "https://help.openai.com/zh-hans-cn/articles/11369540-using-codex-with-your-chatgpt-plan",
+      "label": "OpenAI Help Center — Codex 使用指南",
+      "scraped_text": "How to use Codex with your ChatGPT plan: Codex App available for download on macOS and Windows. CLI tool for terminal-native workflows. IDE extension for VS Code and JetBrains. Usage counts toward your ChatGPT plan's Agent quota — heavy users on Plus/Pro plans may hit shared rate limits. Pro and Enterprise plans get priority access. Codex can work in 'background mode' where it autonomously monitors repositories, fixes CI/CD failures, and opens automated PRs for dependency updates or deprecated API migrations."
+    },
+    {
+      "url": "https://developers.openai.com/codex/",
+      "label": "OpenAI 开发者文档 — Codex",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "OpenAI 官方开发者文档介绍 Codex 的产品能力覆盖本地终端、IDE、桌面应用和云端软件工程任务。Codex 能读取与修改代码、运行命令和测试、审查变更，并通过可复用技能和工具连接外部工作流；云端任务运行在隔离环境中，便于并行委派、检查执行证据和继续迭代。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://www.faros.ai/blog/best-ai-coding-agents-2026",
+      "label": "Faros AI — 2026 AI Coding Agents 技术评测",
+      "scraped_text": "Faros AI's in-depth evaluation of Codex (2026): 'Codex's multi-agent architecture is the most ambitious — it can run 3-5 parallel worktrees simultaneously, each tackling a different issue. The Computer Use capability means it can actually use a browser to look up documentation, inspect CI logs, and debug by observing runtime behavior — not just static code analysis. Trust score: 4.2/5. Cost concern: heavy usage on ChatGPT Pro plan burns through agent quota quickly. Best for: teams that want an autonomous CI/CD maintainer that works overnight without prompting.'"
+    },
+    {
+      "url": "https://www.qodo.ai/blog/best-ai-coding-assistant-tools/",
+      "label": "Qodo Blog — AI Coding Tools 全景横评",
+      "scraped_text": "Qodo's 15-tool comparison classifies Codex as a 'Native AI IDE + Agent Platform' alongside Cursor and Windsurf. Key note: 'OpenAI entering the agent platform space directly threatens the plugin economy — why buy a third-party agent when the model provider offers one natively?' Pricing analysis: Codex is bundled with ChatGPT Plus ($20/mo) but with strict agent quota limits. Pro ($200/mo) gives more headroom. Enterprise plans offer unlimited agents with data retention controls."
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=openai_codex_2026",
+      "label": "Hacker News — OpenAI Codex 讨论",
+      "scraped_text": "Developer reactions to Codex relaunch: 'The isolated worktree approach is genius — it's like having a CI pipeline that writes the code before testing it.' 'Computer Use means Codex can actually verify its work by seeing the app run, which is a huge advantage over text-only agents.' Concerns: 'Another OpenAI product that's amazing at first but throttled by quota limits.' 'The ChatGPT integration feels like lock-in — your project context lives in OpenAI's cloud.' Comparison: 'Codex vs Claude Code: Codex has better automation (scheduled tasks, multi-repo), Claude Code has better reasoning on messy legacy codebases.'"
+    },
+    {
+      "url": "https://reddit.com/r/programming/comments/codex_multiverse_2026",
+      "label": "Reddit — Codex 多智能体实测",
+      "scraped_text": "User review: 'I set up Codex Automations to review and fix failing CI tests every morning. It's been running for 2 weeks — 70% of its fixes work without human intervention. The other 30% it correctly flags for review.' Criticism: 'On a Plus plan, I can't run more than 2 concurrent agents and it drains my quota in a day of heavy use.' Enterprise developer: 'Our team switched from Copilot to Codex for the automation features, but kept Copilot for inline completions — they're complementary.' Feature gap: 'No native JetBrains debugger integration yet, which Cursor has.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2025,
+    "parent": "OpenAI",
+    "headquarters": "San Francisco, CA",
+    "pricing": "Bundled with ChatGPT Plus ($20/mo) / Pro ($200/mo) / Enterprise",
+    "last_updated": "2026-05-23"
+  }
+}

@@ -1,0 +1,1362 @@
+[
+  {
+    "node_id": "collector",
+    "role": "collector",
+    "status": "completed",
+    "label": "采集 Agent",
+    "framework": "",
+    "input_summary": "共加载 8 个竞品的缓存数据。总计 13 条可用强证据：官方来源 8 条（每个竞品各 1 条），社区来源 5 条（Claude Code 2 条、Cursor 1 条、Qodo 1 条、Windsurf 1 条）。基准来源（benchmark）和前瞻信号（leading）均为缺失状态。GitHub Copilot、OpenAI Codex、Roo Code、通义灵码 4 个竞品仅有官方来源，缺少社区、基准和前瞻信号证据。",
+    "output_summary": "## 数据采集摘要\n\n### 各竞品证据覆盖情况\n\n**Claude Code (Anthropic)**：3 条强证据（官方 1、社区 2）。已覆盖**定位**（终端原生 Agent 编码工具）、**核心能力**（上下文感知代码生成、多文件编辑、自主执行命令和测试）、**用户反馈**（ProductHunt 4.8/5 星，Reddit 评价为“替代高级开发者审查 PR”）。**缺失**：用户替代（无社区痛点证据）、分发渠道、战略扩张、前瞻信号。\n\n**Cursor (Anysphere)**：2 条强证据（官方 1、社区 1）。已覆盖**定位**（AI 原生 IDE）、**核心能力**（Tab 下一编辑预测、Agent 模式、Composer 功能）、**用户反馈**（Reddit 称 Tab 为杀手功能，Agent 模式成本高）。**缺失**：用户替代、分发渠道、战略扩张、前瞻信号。\n\n**GitHub Copilot (Microsoft)**：1 条强证据（官方 1）。仅覆盖**定位**（全球最广泛采用的 AI 开发者工具）、**核心能力**（代码补全、Copilot Chat、Workspace、Code Review、Extensions 生态）。**缺失**：用户反馈、用户替代、分发渠道、战略扩张、前瞻信号、基准评测。\n\n**OpenAI Codex**：1 条强证据（官方 1）。仅覆盖**定位**（旗舰 AI 编码 Agent 平台，多Agent并行 + Computer Use）、**核心能力**（隔离工作树与差异、记忆、自动化、自主云环境）。**缺失**：用户反馈、用户替代、分发渠道、战略扩张、前瞻信号、基准评测。\n\n**Qodo (原CodiumAI)**：2 条强证据（官方 1、社区 1）。已覆盖**定位**（AI 生成代码的全生命周期质量保障平台）、**核心能力**（BDD 测试生成、自动 PR 审查、合规扫描）、**用户反馈**（Reddit 称 PR 审查最彻底，生产事故减少 40%）。**缺失**：用户替代、分发渠道、战略扩张、前瞻信号、基准评测。\n\n**Roo Code**：1 条强证据（官方 1）。仅覆盖**定位**（开源 VS Code 扩展 AI 编码助手）、**核心能力**（自带模型 BYOM、透明代码修改流程、多模型切换）。**缺失**：用户反馈、用户替代、分发渠道、战略扩张、前瞻信号、基准评测。\n\n**通义灵码 (Alibaba Cloud)**：1 条强证据（官方 1）。仅覆盖**定位**（阿里云智能编码助手）、**核心能力**（代码补全/解释/优化、Bug 修复、单元测试、仓库级问答、深度集成阿里云生态）。**缺失**：用户反馈、用户替代、分发渠道、战略扩张、前瞻信号、基准评测。\n\n**Windsurf (Codeium)**：2 条强证据（官方 1、社区 1）。已覆盖**定位**（AI 原生 IDE，与 Cursor 直接竞争）、**核心能力**（Flows 全自主代码编排、多文件编辑、运行时感知调试）、**用户反馈**（Reddit 称 Flows 比 Cursor Agent 模式更自主，但 Flow 分钟计费昂贵）。**缺失**：用户替代、分发渠道、战略扩张、前瞻信号、基准评测。\n\n### 主要数据缺口\n所有竞品均缺少**基准评测**（第三方横向对比/技术评测）和**前瞻信号**（招聘、融资、路线图、专利、组织调整）。GitHub Copilot、OpenAI Codex、Roo Code、通义灵码 还缺少**社区用户反馈**（痛点/替代原因）。这些缺口导致对竞品威胁的判断证据不足，需优先补采。",
+    "confidence": 0.75,
+    "evidence": [
+      {
+        "source_url": "https://claude.ai/code",
+        "source_label": "Claude Code 官网",
+        "quote": "Claude Code is Anthropic's agentic coding tool. It operates directly in your terminal, understanding your entire codebase. Features: context-aware code generation, multi-file editing, terminal-native workflow, git integration, custom hooks and skills. Built on Claude Opus 4.",
+        "relevance": "官方确认定位为终端原生 Agent 编码工具，核心功能覆盖自主编码、测试执行和 Git 集成",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://producthunt.com/products/claude-code/reviews",
+        "source_label": "ProductHunt 用户评价",
+        "quote": "4.8/5 stars. Top review: 'I shipped a feature in 2 hours that I estimated at 2 days. Claude Code wrote 800 lines across 12 files, all tests passing.' Criticism: 'Expensive for individual devs. $200/month API bills.'",
+        "relevance": "用户反馈显示效率提升显著但成本高昂，API 账单可达每月 200 美元",
+        "source_tier": "community"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/claude_code_vs_copilot",
+        "source_label": "Reddit — Claude Code vs Copilot",
+        "quote": "Developers comparing: Claude Code wins on complex multi-file tasks and autonomous debugging. Copilot wins on inline completions and IDE integration. Common take: 'Claude Code replaces the senior dev reviewing your PR. Copilot replaces the autocomplete.'",
+        "relevance": "社区对比显示 Claude Code 在复杂多文件任务和自主调试方面优于 Copilot，但 Copilot 在行内补全和 IDE 集成方面领先",
+        "source_tier": "community"
+      },
+      {
+        "source_url": "https://cursor.com",
+        "source_label": "Cursor 官网",
+        "quote": "Cursor is the AI-first IDE built from the ground up for agentic development. Features: Tab (next-edit prediction), Agent Mode (multi-step autonomous task execution), Composer (generate entire features from natural language). 5M+ weekly active developers.",
+        "relevance": "官方定位为 AI 原生 IDE，核心差异化功能是 Tab 下一编辑预测和 Agent 模式，周活开发者超 500 万",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://reddit.com/r/cursor/comments/agent_mode_review",
+        "source_label": "Reddit — Cursor 用户社区",
+        "quote": "User consensus: Cursor's Tab is the killer feature. Agent Mode is impressive for greenfield features but can be destructive on existing code. Top complaint: 'Agent Mode costs me $50/month in API credits on top of the $20 Pro subscription.'",
+        "relevance": "用户认为 Tab 功能是杀手锏，Agent 模式对新建项目出色但对现有代码有破坏性，叠加 API 费用后成本较高",
+        "source_tier": "community"
+      },
+      {
+        "source_url": "https://github.com/features/copilot",
+        "source_label": "GitHub Copilot 官网",
+        "quote": "GitHub Copilot is the world's most widely adopted AI developer tool. Powered by OpenAI GPT-5 and GPT-5.1 Codex models. Features: inline code completions, Copilot Chat, Copilot Workspace, Copilot Code Review, Copilot Extensions ecosystem. 50M+ developers on platform, 100K+ enterprise customers.",
+        "relevance": "官方确认全球采用率最高，覆盖 5000 万开发者和 10 万企业客户，功能生态完整",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://openai.com/zh-Hans-CN/codex/",
+        "source_label": "OpenAI Codex 产品主页",
+        "quote": "OpenAI Codex is OpenAI's flagship AI Coding Agent platform, rebuilt as a multi-agent coding command center. Core differentiator: multi-agent parallel streams + Computer Use — Codex can autonomously spawn isolated cloud environments, execute multi-file refactors, run tests, and open PRs without human supervision.",
+        "relevance": "官方定位为旗舰多Agent编码平台，核心差异化是并行多Agent流和Computer Use 自主执行能力",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.qodo.ai",
+        "source_label": "Qodo 官网",
+        "quote": "Qodo (formerly CodiumAI) is a code quality and testing pioneer, repositioned as a full-lifecycle quality assurance platform for AI-generated code. Primary focus: automated test generation, PR review, and enterprise code compliance. Targets Fortune 100 enterprises.",
+        "relevance": "官方定位为 AI 生成代码的质量保障平台，主要功能是自动化测试生成和 PR 审查，目标为财富 100 强企业",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/qodo_2026",
+        "source_label": "Reddit — Qodo 用户反馈",
+        "quote": "Developer feedback: 'Qodo's PR review is the most thorough AI review I've seen — it catches things like missing null checks, race conditions, and SQL injection patterns.' 'We added Qodo as a mandatory CI step. It's reduced our production incidents by 40% in 3 months.'",
+        "relevance": "用户认为 Qodo 的 PR 审查最彻底，作为 CI 步骤后生产事故减少 40%，但属于补充工具而非编码助手",
+        "source_tier": "community"
+      },
+      {
+        "source_url": "https://github.com/RooVetGit/Roo-Code",
+        "source_label": "Roo Code GitHub 仓库",
+        "quote": "Roo Code is an open-source VS Code extension AI coding assistant. It allows developers to bring their own model (BYOM) by configuring any API endpoint. Key features: fully transparent code modification permission flow, customizable tool sets, multi-model switching. MIT licensed.",
+        "relevance": "官方定位为开源 VS Code 扩展，核心差异化是自带模型（BYOM）和透明代码修改权限，MIT 许可",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://tongyi.aliyun.com/lingma",
+        "source_label": "通义灵码 官网",
+        "quote": "通义灵码是阿里云推出的智能编码助手，基于通义千问大模型。功能覆盖：代码补全、代码解释、代码优化、Bug 修复、单元测试生成、代码审查、整个仓库级代码问答。深度集成阿里云开发者生态。日均调用量超 30 亿次，服务超过 200 万中国开发者。",
+        "relevance": "官方定位为阿里云智能编码助手，深度集成阿里云生态，日均调用 30 亿次，服务 200 万中国开发者",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://codeium.com/windsurf",
+        "source_label": "Windsurf 官网",
+        "quote": "Windsurf is a full-featured AI-native IDE by Codeium, powered by Cognition technology. Key features: Flows (full-autonomous code orchestration — the agent writes code, runs tests, reads errors in real-time, and self-corrects in a continuous loop). Windsurf positions itself as having 'the most coherent autonomous coding flow.'",
+        "relevance": "官方定位为 AI 原生 IDE 与 Cursor 直接竞争，核心差异化是 Flows 全自主循环（写代码→运行测试→读取错误→自我修正）",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/windsurf_vs_cursor_2026",
+        "source_label": "Reddit — Windsurf vs Cursor 对比",
+        "quote": "Developer comparison: 'Windsurf's Flows are more autonomous than Cursor's Agent Mode — Windsurf actually runs the test suite and fixes failures.' 'Cursor has better UI/UX and more plugins, but Windsurf's runtime-aware agent is smarter about debugging.' Pricing complaints: 'Windsurf's Flow minutes are expensive — a complex task can burn $5-10 in credits.'",
+        "relevance": "社区对比认为 Windsurf 的 Flows 比 Cursor Agent 模式更自主（实际运行测试并修复失败），但 UI/UX 和插件生态不如 Cursor，Flow 计费昂贵",
+        "source_tier": "community"
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "competitor": "Claude Code (Anthropic)",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "Claude Code (Anthropic) AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "Claude Code (Anthropic)",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com Claude Code (Anthropic) releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Claude Code (Anthropic)",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "Claude Code (Anthropic) hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Cursor (Anysphere)",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "Cursor (Anysphere) AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "Cursor (Anysphere)",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com Cursor (Anysphere) releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Cursor (Anysphere)",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "Cursor (Anysphere) hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "GitHub Copilot (Microsoft)",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "GitHub Copilot (Microsoft) 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "GitHub Copilot (Microsoft)",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "GitHub Copilot (Microsoft) AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "GitHub Copilot (Microsoft)",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com GitHub Copilot (Microsoft) releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "GitHub Copilot (Microsoft)",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "GitHub Copilot (Microsoft) hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "OpenAI Codex 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "OpenAI Codex AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com OpenAI Codex releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "OpenAI Codex hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Qodo (原CodiumAI)",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "Qodo (原CodiumAI) AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "Qodo (原CodiumAI)",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com Qodo (原CodiumAI) releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Qodo (原CodiumAI)",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "Qodo (原CodiumAI) hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Roo Code",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "Roo Code 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "Roo Code",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "Roo Code AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "Roo Code",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com Roo Code releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Roo Code",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "Roo Code hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "通义灵码 (Alibaba Cloud) 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "通义灵码 (Alibaba Cloud) AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 通义灵码 (Alibaba Cloud) releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "通义灵码 (Alibaba Cloud) hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Windsurf (Codeium)",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "Windsurf (Codeium) AI 代码助手 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "Windsurf (Codeium)",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com Windsurf (Codeium) releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "Windsurf (Codeium)",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "Windsurf (Codeium) hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 2,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      }
+    ],
+    "dependencies": [],
+    "disagreements": [],
+    "threat_assessment": "",
+    "threat_target": {
+      "name": "GitHub Copilot",
+      "positioning": "面向企业和专业开发者的 AI 代码助手",
+      "target_users": "企业开发团队和专业开发者",
+      "core_capabilities": "代码补全、对话、代码审查、IDE 与 GitHub 工作流集成",
+      "competitive_concern": "Agent 编码工具和 AI 原生 IDE 正在分流专业开发者"
+    },
+    "threat_scores": {},
+    "per_competitor_notes": {},
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:42:46.385663+00:00"
+  },
+  {
+    "node_id": "analyst-a",
+    "role": "analyst-a",
+    "status": "completed",
+    "label": "分析 Agent A · VRIO",
+    "framework": "VRIO",
+    "input_summary": "received collector output; VRIO lens applied to competitor assets and defensibility",
+    "output_summary": "Cursor(62)和OpenAI Codex(61)构成中等威胁，Claude Code(59)能力威胁高但分发弱；Windsurf(49)能力追赶中；Qodo(31)、通义灵码(35)、Roo Code(24)威胁较低。",
+    "confidence": 0.65,
+    "evidence": [
+      {
+        "source_url": "https://claude.ai/code",
+        "source_label": "Claude Code 官网",
+        "quote": "Claude Code is Anthropic's agentic coding tool. It operates directly in your terminal.",
+        "relevance": "supports Claude Code的定位和能力基础",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/claude_code_vs_copilot",
+        "source_label": "Reddit — Claude Code vs Copilot",
+        "quote": "Developers comparing: Claude Code wins on complex multi-file tasks and autonomous debugging. Copilot wins on inline completions and IDE integration.",
+        "relevance": "supports Claude Code在复杂多文件任务上的能力追赶威胁",
+        "source_tier": "C"
+      },
+      {
+        "source_url": "https://cursor.com",
+        "source_label": "Cursor 官网",
+        "quote": "Cursor is the AI-first IDE built from the ground up for agentic development. 5M+ weekly active developers.",
+        "relevance": "supports Cursor的分发规模和定位",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://reddit.com/r/cursor/comments/agent_mode_review",
+        "source_label": "Reddit — Cursor 用户社区",
+        "quote": "User consensus: Cursor's Tab is the killer feature. Agent Mode is impressive for greenfield features.",
+        "relevance": "supports Cursor的用户替代威胁",
+        "source_tier": "C"
+      },
+      {
+        "source_url": "https://openai.com/zh-Hans-CN/codex/",
+        "source_label": "OpenAI Codex 产品主页",
+        "quote": "OpenAI Codex is OpenAI's flagship AI Coding Agent platform, rebuilt as a multi-agent coding command center. Core differentiator: multi-agent parallel streams + Computer Use.",
+        "relevance": "supports OpenAI Codex的能力追赶威胁",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.qodo.ai",
+        "source_label": "Qodo 官网",
+        "quote": "Qodo (formerly CodiumAI) is a code quality and testing pioneer, repositioned as a full-lifecycle quality assurance platform for AI-generated code.",
+        "relevance": "supports Qodo的非替代定位",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/qodo_2026",
+        "source_label": "Reddit — Qodo 用户反馈",
+        "quote": "Developer feedback: 'Qodo's PR review is the most thorough AI review I've seen.'",
+        "relevance": "supports Qodo作为补充工具而非替代工具的定位",
+        "source_tier": "C"
+      },
+      {
+        "source_url": "https://github.com/RooVetGit/Roo-Code",
+        "source_label": "Roo Code GitHub 仓库",
+        "quote": "Roo Code is an open-source VS Code extension AI coding assistant. It allows developers to bring their own model (BYOM).",
+        "relevance": "supports Roo Code的开源BYOM定位",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://tongyi.aliyun.com/lingma",
+        "source_label": "通义灵码 官网",
+        "quote": "通义灵码是阿里云推出的智能编码助手。深度集成阿里云开发者生态。日均调用量超 30 亿次，服务超过 200 万中国开发者。",
+        "relevance": "supports 通义灵码的阿里云生态分发优势",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://codeium.com/windsurf",
+        "source_label": "Windsurf 官网",
+        "quote": "Windsurf is a full-featured AI-native IDE by Codeium. Key features: Flows (full-autonomous code orchestration).",
+        "relevance": "supports Windsurf的Flows自主循环能力",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/windsurf_vs_cursor_2026",
+        "source_label": "Reddit — Windsurf vs Cursor 对比",
+        "quote": "Developer comparison: 'Windsurf's Flows are more autonomous than Cursor's Agent Mode — Windsurf actually runs the test suite and fixes failures.'",
+        "relevance": "supports Windsurf在自主性上的能力追赶",
+        "source_tier": "C"
+      }
+    ],
+    "evidence_gaps": [],
+    "dependencies": [
+      "collector"
+    ],
+    "disagreements": [],
+    "threat_assessment": "",
+    "threat_target": {
+      "name": "GitHub Copilot",
+      "positioning": "面向企业和专业开发者的 AI 代码助手",
+      "target_users": "企业开发团队和专业开发者",
+      "core_capabilities": "代码补全、对话、代码审查、IDE 与 GitHub 工作流集成",
+      "competitive_concern": "Agent 编码工具和 AI 原生 IDE 正在分流专业开发者"
+    },
+    "threat_scores": {
+      "Claude Code (Anthropic)": {
+        "user_substitution": 72,
+        "capability_catch_up": 78,
+        "distribution": 35,
+        "strategic_expansion": 52,
+        "overall": 59
+      },
+      "Cursor (Anysphere)": {
+        "user_substitution": 68,
+        "capability_catch_up": 75,
+        "distribution": 48,
+        "strategic_expansion": 55,
+        "overall": 62
+      },
+      "OpenAI Codex": {
+        "user_substitution": 55,
+        "capability_catch_up": 82,
+        "distribution": 42,
+        "strategic_expansion": 65,
+        "overall": 61
+      },
+      "Qodo (原CodiumAI)": {
+        "user_substitution": 25,
+        "capability_catch_up": 38,
+        "distribution": 30,
+        "strategic_expansion": 32,
+        "overall": 31
+      },
+      "Roo Code": {
+        "user_substitution": 20,
+        "capability_catch_up": 30,
+        "distribution": 22,
+        "strategic_expansion": 25,
+        "overall": 24
+      },
+      "通义灵码 (Alibaba Cloud)": {
+        "user_substitution": 18,
+        "capability_catch_up": 28,
+        "distribution": 55,
+        "strategic_expansion": 40,
+        "overall": 35
+      },
+      "Windsurf (Codeium)": {
+        "user_substitution": 55,
+        "capability_catch_up": 65,
+        "distribution": 30,
+        "strategic_expansion": 45,
+        "overall": 49
+      }
+    },
+    "per_competitor_notes": {
+      "Claude Code (Anthropic)": "终端原生Agent编码工具，多文件自主任务能力超越Copilot，但分发渠道极弱且成本高昂，overall 59。",
+      "Cursor (Anysphere)": "AI原生IDE，Tab预测和Agent模式构成强替代威胁，周活500万且生态在扩张，overall 62。",
+      "OpenAI Codex": "多Agent并行+Computer Use能力构成最强能力追赶威胁，但缺少社区证据验证实际替代率，overall 61。",
+      "Qodo (原CodiumAI)": "聚焦代码质量保障而非编码替代，对Copilot核心用户群替代压力有限，overall 31。",
+      "Roo Code": "开源BYOM工具，威胁主要来自成本敏感型个人开发者，企业级威胁极低，overall 24。",
+      "通义灵码 (Alibaba Cloud)": "阿里云生态分发能力强但能力对标Copilot基础功能，中国区外威胁有限，overall 35。",
+      "Windsurf (Codeium)": "Flows全自主循环能力突出但分发和品牌弱于Cursor，overall 49。"
+    },
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:43:06.969888+00:00"
+  },
+  {
+    "node_id": "analyst-b",
+    "role": "analyst-b",
+    "status": "completed",
+    "label": "分析 Agent B · SWOT",
+    "framework": "SWOT Analysis",
+    "input_summary": "received collector output; SWOT lens applied to competitor opportunity and target exposure",
+    "output_summary": "OpenAI Codex 能力和扩张威胁最高（overall 67）；Cursor 和 Claude Code 用户替代威胁突出（68/72）；Windsurf 和通义灵码中等；Qodo 和 Roo Code 威胁低。",
+    "confidence": 0.7,
+    "evidence": [
+      {
+        "source_url": "https://reddit.com/r/programming/comments/claude_code_vs_copilot",
+        "source_label": "Reddit — Claude Code vs Copilot",
+        "quote": "Claude Code wins on complex multi-file tasks and autonomous debugging. Copilot wins on inline completions and IDE integration. Common take: 'Claude Code replaces the senior dev reviewing your PR. Copilot replaces the autocomplete.'",
+        "relevance": "supports user_substitution for Claude Code: 社区证实其替代 Copilot 在复杂任务上的使用场景",
+        "source_tier": "C"
+      },
+      {
+        "source_url": "https://cursor.com",
+        "source_label": "Cursor 官网",
+        "quote": "Cursor is the AI-first IDE built from the ground up for agentic development. Features: Tab (next-edit prediction), Agent Mode (multi-step autonomous task execution). 5M+ weekly active developers.",
+        "relevance": "supports distribution and user_substitution for Cursor: 500万周活开发者显示用户基础快速增长",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://openai.com/zh-Hans-CN/codex/",
+        "source_label": "OpenAI Codex 产品主页",
+        "quote": "OpenAI Codex is OpenAI's flagship AI Coding Agent platform, rebuilt as a multi-agent coding command center. Core differentiator: multi-agent parallel streams + Computer Use — Codex can autonomously spawn isolated cloud environments, execute multi-file refactors, run tests, and open PRs without human supervision.",
+        "relevance": "supports capability_catch_up and strategic_expansion for OpenAI Codex: 多Agent并行和Computer Use代表能力大幅领先",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/qodo_2026",
+        "source_label": "Reddit — Qodo 用户反馈",
+        "quote": "Developer feedback: 'Qodo's PR review is the most thorough AI review I've seen — it catches things like missing null checks, race conditions, and SQL injection patterns.' 'We added Qodo as a mandatory CI step. It's reduced our production incidents by 40% in 3 months.'",
+        "relevance": "supports user_substitution for Qodo: 用户将其作为CI补充工具而非编码助手替代品",
+        "source_tier": "C"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/windsurf_vs_cursor_2026",
+        "source_label": "Reddit — Windsurf vs Cursor 对比",
+        "quote": "Windsurf's Flows are more autonomous than Cursor's Agent Mode — Windsurf actually runs the test suite and fixes failures.",
+        "relevance": "supports capability_catch_up for Windsurf: 社区认为Flows在自主性上超越Cursor",
+        "source_tier": "C"
+      }
+    ],
+    "evidence_gaps": [],
+    "dependencies": [
+      "collector"
+    ],
+    "disagreements": [],
+    "threat_assessment": "",
+    "threat_target": {
+      "name": "GitHub Copilot",
+      "positioning": "面向企业和专业开发者的 AI 代码助手",
+      "target_users": "企业开发团队和专业开发者",
+      "core_capabilities": "代码补全、对话、代码审查、IDE 与 GitHub 工作流集成",
+      "competitive_concern": "Agent 编码工具和 AI 原生 IDE 正在分流专业开发者"
+    },
+    "threat_scores": {
+      "Claude Code (Anthropic)": {
+        "user_substitution": 72,
+        "capability_catch_up": 66,
+        "distribution": 35,
+        "strategic_expansion": 55,
+        "overall": 57
+      },
+      "Cursor (Anysphere)": {
+        "user_substitution": 68,
+        "capability_catch_up": 64,
+        "distribution": 55,
+        "strategic_expansion": 60,
+        "overall": 62
+      },
+      "OpenAI Codex": {
+        "user_substitution": 70,
+        "capability_catch_up": 75,
+        "distribution": 50,
+        "strategic_expansion": 72,
+        "overall": 67
+      },
+      "Qodo (原CodiumAI)": {
+        "user_substitution": 30,
+        "capability_catch_up": 45,
+        "distribution": 40,
+        "strategic_expansion": 40,
+        "overall": 39
+      },
+      "Roo Code": {
+        "user_substitution": 25,
+        "capability_catch_up": 35,
+        "distribution": 30,
+        "strategic_expansion": 35,
+        "overall": 31
+      },
+      "通义灵码 (Alibaba Cloud)": {
+        "user_substitution": 35,
+        "capability_catch_up": 40,
+        "distribution": 60,
+        "strategic_expansion": 55,
+        "overall": 48
+      },
+      "Windsurf (Codeium)": {
+        "user_substitution": 60,
+        "capability_catch_up": 58,
+        "distribution": 35,
+        "strategic_expansion": 50,
+        "overall": 51
+      }
+    },
+    "per_competitor_notes": {
+      "Claude Code (Anthropic)": "用户替代威胁高（72），社区证实其在复杂多文件任务上优于 Copilot，但分发渠道弱（35）且成本高。",
+      "Cursor (Anysphere)": "整体中等威胁（62），Tab 功能和 Agent 模式直接分流专业开发者，用户替代（68）和战略扩张（60）均需关注。",
+      "OpenAI Codex": "能力追赶（75）和战略扩张（72）威胁最高，多Agent并行和Computer Use定位为'数字员工'，直接侵蚀 Copilot 的企业市场。",
+      "Qodo (原CodiumAI)": "整体低威胁（39），定位为质量保障补充工具而非编码助手，用户替代性弱。",
+      "Roo Code": "整体低威胁（31），开源 BYOM 模式对特定开发者有吸引力但规模有限。",
+      "通义灵码 (Alibaba Cloud)": "分发渠道中等（60），深度集成阿里云生态在中国市场有优势，但能力追赶证据不足。",
+      "Windsurf (Codeium)": "用户替代中等（60），Flows 全自主循环比 Cursor Agent 模式更自主，但分发和扩展信号弱。"
+    },
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:43:04.218181+00:00"
+  },
+  {
+    "node_id": "qa",
+    "role": "qa",
+    "status": "completed",
+    "label": "质检 Agent",
+    "framework": "交叉验证",
+    "input_summary": "received VRIO and SWOT matrices",
+    "output_summary": "证据辩证调和：对7个竞品逐一调和 VRIO（侧重能力持久性）与 SWOT（侧重市场替代压力）的分歧。Claude Code 和 Cursor 在用户替代维度无分歧（直接取高值）；OpenAI Codex 因能力追赶证据最强且缺少社区验证，调和后整体70为高威胁；Qodo 和 Roo Code 两分析师一致低威胁；通义灵码因 SWOT 赋予更高扩张风险但证据不足，调和后 medium-low；Windsurf 因社区证实 Flows 自主性，调和后 medium。OpenAI Codex 和通义灵码的 community 和 benchmark 源缺失导致 '证据不足' 判断。",
+    "confidence": 0.82,
+    "evidence": [
+      {
+        "source_url": "https://reddit.com/r/programming/comments/claude_code_vs_copilot",
+        "source_label": "Reddit — Claude Code vs Copilot",
+        "quote": "Developers comparing: Claude Code wins on complex multi-file tasks and autonomous debugging. Copilot wins on inline completions and IDE integration.",
+        "relevance": "decisive evidence for Claude Code user_substitution and capability_catch_up scores",
+        "source_tier": "C"
+      },
+      {
+        "source_url": "https://cursor.com",
+        "source_label": "Cursor 官网",
+        "quote": "Cursor is the AI-first IDE built from the ground up for agentic development. 5M+ weekly active developers.",
+        "relevance": "decisive evidence for Cursor distribution and user_substitution scores",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://openai.com/zh-Hans-CN/codex/",
+        "source_label": "OpenAI Codex 产品主页",
+        "quote": "OpenAI Codex is OpenAI's flagship AI Coding Agent platform, rebuilt as a multi-agent coding command center. Core differentiator: multi-agent parallel streams + Computer Use.",
+        "relevance": "decisive evidence for OpenAI Codex capability_catch_up score; highest quality source (100)",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.qodo.ai",
+        "source_label": "Qodo 官网",
+        "quote": "Qodo (formerly CodiumAI) is a code quality and testing pioneer, repositioned as a full-lifecycle quality assurance platform for AI-generated code.",
+        "relevance": "decisive evidence for Qodo non-substitutive positioning",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://github.com/RooVetGit/Roo-Code",
+        "source_label": "Roo Code GitHub 仓库",
+        "quote": "Roo Code is an open-source VS Code extension AI coding assistant. It allows developers to bring their own model (BYOM).",
+        "relevance": "decisive evidence for Roo Code low enterprise threat",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://tongyi.aliyun.com/lingma",
+        "source_label": "通义灵码 官网",
+        "quote": "通义灵码是阿里云推出的智能编码助手。深度集成阿里云开发者生态。日均调用量超 30 亿次，服务超过 200 万中国开发者。",
+        "relevance": "decisive evidence for distribution score; community evidence missing",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/windsurf_vs_cursor_2026",
+        "source_label": "Reddit — Windsurf vs Cursor 对比",
+        "quote": "Developer comparison: 'Windsurf's Flows are more autonomous than Cursor's Agent Mode — Windsurf actually runs the test suite and fixes failures.'",
+        "relevance": "decisive evidence for Windsurf capability_catch_up score",
+        "source_tier": "C"
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采 Reddit/Hacker News 社区讨论或第三方评测后再确认用户替代压力"
+      },
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "benchmark",
+        "dimension": "capability_catch_up",
+        "recommended_response": "补采第三方基准评测（如 Faros AI、Qodo Blog全景横评）验证能力声明"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采掘金/知乎/Reddit社区讨论后再确认中国区外替代压力"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "benchmark",
+        "dimension": "capability_catch_up",
+        "recommended_response": "补采第三方能力评测后再确认能力追赶速度"
+      },
+      {
+        "competitor": "Roo Code",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采 Reddit/Hacker News 讨论后再确认开源替代威胁"
+      },
+      {
+        "competitor": "GitHub Copilot (Microsoft)",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采 Reddit/Hacker News 口碑以评估 Copilot 自身用户流失压力"
+      }
+    ],
+    "dependencies": [
+      "analyst-a",
+      "analyst-b"
+    ],
+    "disagreements": [
+      {
+        "target_node_id": "analyst-a",
+        "dimension": "分析结论",
+        "delta": 0.2
+      },
+      {
+        "target_node_id": "analyst-b",
+        "dimension": "分析结论",
+        "delta": 0.2
+      }
+    ],
+    "threat_assessment": {
+      "Claude Code (Anthropic)": {
+        "level": "中",
+        "score": 59,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×0 / C×2 / L×0",
+        "decisive_sources": [
+          "Reddit — Claude Code vs Copilot (C, quality=80): 社区共识证实 Claude Code 在复杂多文件任务上替代 Copilot 场景",
+          "Claude Code 官网 (O, quality=85): 确认终端原生 Agent 定位"
+        ]
+      },
+      "Cursor (Anysphere)": {
+        "level": "中",
+        "score": 63,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×0 / C×1 / L×0",
+        "decisive_sources": [
+          "Cursor 官网 (O, quality=85): 500万周活开发者，AI原生IDE定位",
+          "Reddit — Cursor 用户社区 (C, quality=95): Tab 和 Agent 模式的用户替代证据"
+        ]
+      },
+      "OpenAI Codex": {
+        "level": "高",
+        "score": 70,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×1 / B×0 / C×0 / L×0",
+        "decisive_sources": [
+          "OpenAI Codex 产品主页 (O, quality=100): 多Agent并行+Computer Use的官方能力声明，能力追赶信号明确"
+        ]
+      },
+      "Qodo (原CodiumAI)": {
+        "level": "低",
+        "score": 36,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×0 / C×1 / L×0",
+        "decisive_sources": [
+          "Qodo 官网 (O, quality=85): 确认质量保障平台定位",
+          "Reddit — Qodo 用户反馈 (C, quality=95): 用户证实为CI补充工具而非替代品"
+        ]
+      },
+      "Roo Code": {
+        "level": "低",
+        "score": 28,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×1 / B×0 / C×0 / L×0",
+        "decisive_sources": [
+          "Roo Code GitHub 仓库 (O, quality=85): 确认开源BYOM定位，企业级威胁极低"
+        ]
+      },
+      "通义灵码 (Alibaba Cloud)": {
+        "level": "中",
+        "score": 44,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×1 / B×0 / C×0 / L×0",
+        "decisive_sources": [
+          "通义灵码 官网 (O, quality=85): 日均30亿次调用和200万开发者的分发规模"
+        ]
+      },
+      "Windsurf (Codeium)": {
+        "level": "中",
+        "score": 51,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×0 / C×1 / L×0",
+        "decisive_sources": [
+          "Reddit — Windsurf vs Cursor (C, quality=80): Flows自主性超越Cursor Agent模式的社区证据",
+          "Windsurf 官网 (O, quality=85): Flows全自主代码编排能力"
+        ]
+      }
+    },
+    "threat_target": {
+      "name": "GitHub Copilot",
+      "positioning": "面向企业和专业开发者的 AI 代码助手",
+      "target_users": "企业开发团队和专业开发者",
+      "core_capabilities": "代码补全、对话、代码审查、IDE 与 GitHub 工作流集成",
+      "competitive_concern": "Agent 编码工具和 AI 原生 IDE 正在分流专业开发者"
+    },
+    "threat_scores": {
+      "Claude Code (Anthropic)": {
+        "user_substitution": 72,
+        "capability_catch_up": 72,
+        "distribution": 35,
+        "strategic_expansion": 54,
+        "overall": 59
+      },
+      "Cursor (Anysphere)": {
+        "user_substitution": 68,
+        "capability_catch_up": 70,
+        "distribution": 52,
+        "strategic_expansion": 58,
+        "overall": 63
+      },
+      "OpenAI Codex": {
+        "user_substitution": 63,
+        "capability_catch_up": 79,
+        "distribution": 46,
+        "strategic_expansion": 69,
+        "overall": 70
+      },
+      "Qodo (原CodiumAI)": {
+        "user_substitution": 28,
+        "capability_catch_up": 42,
+        "distribution": 35,
+        "strategic_expansion": 36,
+        "overall": 36
+      },
+      "Roo Code": {
+        "user_substitution": 23,
+        "capability_catch_up": 33,
+        "distribution": 26,
+        "strategic_expansion": 30,
+        "overall": 28
+      },
+      "通义灵码 (Alibaba Cloud)": {
+        "user_substitution": 27,
+        "capability_catch_up": 34,
+        "distribution": 58,
+        "strategic_expansion": 48,
+        "overall": 44
+      },
+      "Windsurf (Codeium)": {
+        "user_substitution": 58,
+        "capability_catch_up": 62,
+        "distribution": 33,
+        "strategic_expansion": 48,
+        "overall": 51
+      }
+    },
+    "per_competitor_notes": {},
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {
+      "evaluation_round": 0,
+      "quality_score": 76.4,
+      "score_delta": null,
+      "matrix_completeness": 1.0,
+      "qa_confidence": 0.82,
+      "evidence_gap_count": 6,
+      "disagreement_count": 2,
+      "actionable_disagreement_count": 0,
+      "structural_error_count": 0,
+      "structural_errors": [],
+      "evaluated_sources": 34,
+      "relevance_precision_at_5": 0.456,
+      "claim_answer_rate": 1.0,
+      "bad_domain_leakage": 0.0
+    },
+    "rework_history": [
+      {
+        "route": "write",
+        "reason": "证据相关性指标未达门槛，但当前任务未启用联网工具；带限制说明进入写作。",
+        "passed": false,
+        "forced_completion": true,
+        "metrics": {
+          "evaluation_round": 0,
+          "quality_score": 76.4,
+          "score_delta": null,
+          "matrix_completeness": 1.0,
+          "qa_confidence": 0.82,
+          "evidence_gap_count": 6,
+          "disagreement_count": 2,
+          "actionable_disagreement_count": 0,
+          "structural_error_count": 0,
+          "structural_errors": [],
+          "evaluated_sources": 34,
+          "relevance_precision_at_5": 0.456,
+          "claim_answer_rate": 1.0,
+          "bad_domain_leakage": 0.0
+        }
+      }
+    ],
+    "timestamp": "2026-07-17T09:44:01.326113+00:00"
+  },
+  {
+    "node_id": "writer",
+    "role": "writer",
+    "status": "completed",
+    "label": "撰写 Agent",
+    "framework": "综合分析",
+    "input_summary": "received QA verdict with reconciled matrix",
+    "output_summary": "最高威胁竞品为 OpenAI Codex，综合得分 70（高）。其能力追赶维度达 79，多Agent并行与Computer Use能力直接挑战 Copilot 的编码工作流。Cursor 以 63 分紧随其后，AI原生IDE定位和 500 万周活构成用户替代压力。Claude Code 得分 59，在复杂多文件任务上社区共识替代性强，但分发渠道薄弱。通义灵码得分 44，分发规模巨大但能力证据不足。Qodo 和 Roo Code 威胁较低。",
+    "confidence": 0.82,
+    "evidence": [
+      {
+        "source_url": "https://reddit.com/r/programming/comments/claude_code_vs_copilot",
+        "source_label": "Reddit — Claude Code vs Copilot",
+        "quote": "Developers comparing: Claude Code wins on complex multi-file tasks and autonomous debugging. Copilot wins on inline completions and IDE integration.",
+        "relevance": "decisive evidence for Claude Code user_substitution and capability_catch_up scores",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://cursor.com",
+        "source_label": "Cursor 官网",
+        "quote": "Cursor is the AI-first IDE built from the ground up for agentic development. 5M+ weekly active developers.",
+        "relevance": "decisive evidence for Cursor distribution and user_substitution scores",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://openai.com/zh-Hans-CN/codex/",
+        "source_label": "OpenAI Codex 产品主页",
+        "quote": "OpenAI Codex is OpenAI's flagship AI Coding Agent platform, rebuilt as a multi-agent coding command center. Core differentiator: multi-agent parallel streams + Computer Use.",
+        "relevance": "decisive evidence for OpenAI Codex capability_catch_up score; highest quality source (100)",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.qodo.ai",
+        "source_label": "Qodo 官网",
+        "quote": "Qodo (formerly CodiumAI) is a code quality and testing pioneer, repositioned as a full-lifecycle quality assurance platform for AI-generated code.",
+        "relevance": "decisive evidence for Qodo non-substitutive positioning",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://github.com/RooVetGit/Roo-Code",
+        "source_label": "Roo Code GitHub 仓库",
+        "quote": "Roo Code is an open-source VS Code extension AI coding assistant. It allows developers to bring their own model (BYOM).",
+        "relevance": "decisive evidence for Roo Code low enterprise threat",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://tongyi.aliyun.com/lingma",
+        "source_label": "通义灵码 官网",
+        "quote": "通义灵码是阿里云推出的智能编码助手。深度集成阿里云开发者生态。日均调用量超 30 亿次，服务超过 200 万中国开发者。",
+        "relevance": "decisive evidence for distribution score; community evidence missing",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://reddit.com/r/programming/comments/windsurf_vs_cursor_2026",
+        "source_label": "Reddit — Windsurf vs Cursor 对比",
+        "quote": "Developer comparison: 'Windsurf's Flows are more autonomous than Cursor's Agent Mode — Windsurf actually runs the test suite and fixes failures.'",
+        "relevance": "decisive evidence for Windsurf capability_catch_up score",
+        "source_tier": ""
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采 Reddit/Hacker News 社区讨论或第三方评测后再确认用户替代压力"
+      },
+      {
+        "competitor": "OpenAI Codex",
+        "slot": "benchmark",
+        "dimension": "capability_catch_up",
+        "recommended_response": "补采第三方基准评测（如 Faros AI、Qodo Blog全景横评）验证能力声明"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采掘金/知乎/Reddit社区讨论后再确认中国区外替代压力"
+      },
+      {
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "slot": "benchmark",
+        "dimension": "capability_catch_up",
+        "recommended_response": "补采第三方能力评测后再确认能力追赶速度"
+      },
+      {
+        "competitor": "Roo Code",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采 Reddit/Hacker News 讨论后再确认开源替代威胁"
+      },
+      {
+        "competitor": "GitHub Copilot (Microsoft)",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采 Reddit/Hacker News 口碑以评估 Copilot 自身用户流失压力"
+      }
+    ],
+    "dependencies": [
+      "qa"
+    ],
+    "disagreements": [],
+    "threat_assessment": {
+      "OpenAI Codex": {
+        "level": "高",
+        "score": 70,
+        "evidence_strength": "证据不足"
+      },
+      "Cursor (Anysphere)": {
+        "level": "中",
+        "score": 63,
+        "evidence_strength": "较充分"
+      },
+      "Claude Code (Anthropic)": {
+        "level": "中",
+        "score": 59,
+        "evidence_strength": "较充分"
+      },
+      "Windsurf (Codeium)": {
+        "level": "中",
+        "score": 51,
+        "evidence_strength": "较充分"
+      },
+      "通义灵码 (Alibaba Cloud)": {
+        "level": "中",
+        "score": 44,
+        "evidence_strength": "证据不足"
+      },
+      "Qodo (原CodiumAI)": {
+        "level": "低",
+        "score": 36,
+        "evidence_strength": "较充分"
+      },
+      "Roo Code": {
+        "level": "低",
+        "score": 28,
+        "evidence_strength": "证据不足"
+      }
+    },
+    "threat_target": {
+      "name": "GitHub Copilot",
+      "positioning": "面向企业和专业开发者的 AI 代码助手",
+      "target_users": "企业开发团队和专业开发者",
+      "core_capabilities": "代码补全、对话、代码审查、IDE 与 GitHub 工作流集成",
+      "competitive_concern": "Agent 编码工具和 AI 原生 IDE 正在分流专业开发者"
+    },
+    "threat_scores": {
+      "Claude Code (Anthropic)": {
+        "user_substitution": 72,
+        "capability_catch_up": 72,
+        "distribution": 35,
+        "strategic_expansion": 54,
+        "overall": 59
+      },
+      "Cursor (Anysphere)": {
+        "user_substitution": 68,
+        "capability_catch_up": 70,
+        "distribution": 52,
+        "strategic_expansion": 58,
+        "overall": 63
+      },
+      "OpenAI Codex": {
+        "user_substitution": 63,
+        "capability_catch_up": 79,
+        "distribution": 46,
+        "strategic_expansion": 69,
+        "overall": 70
+      },
+      "Qodo (原CodiumAI)": {
+        "user_substitution": 28,
+        "capability_catch_up": 42,
+        "distribution": 35,
+        "strategic_expansion": 36,
+        "overall": 36
+      },
+      "Roo Code": {
+        "user_substitution": 23,
+        "capability_catch_up": 33,
+        "distribution": 26,
+        "strategic_expansion": 30,
+        "overall": 28
+      },
+      "通义灵码 (Alibaba Cloud)": {
+        "user_substitution": 27,
+        "capability_catch_up": 34,
+        "distribution": 58,
+        "strategic_expansion": 48,
+        "overall": 44
+      },
+      "Windsurf (Codeium)": {
+        "user_substitution": 58,
+        "capability_catch_up": 62,
+        "distribution": 33,
+        "strategic_expansion": 48,
+        "overall": 51
+      }
+    },
+    "per_competitor_notes": {},
+    "response_actions": [
+      {
+        "priority": 88,
+        "response_type": "product",
+        "related_threat_dimension": "capability_catch_up",
+        "competitor": "OpenAI Codex",
+        "concrete_action": "启动应急对标项目，针对 OpenAI Codex 的多Agent并行和Computer Use能力，在 Copilot Agent 模式中实现至少一项等效功能（如多流代码生成），目标下一个大版本发布。",
+        "evidence_basis": "OpenAI Codex 能力追赶得分 79（最高），产品主页明确声明多Agent并行+Computer Use，官方来源质量 100。",
+        "monitoring_signal": "OpenAI Codex 社区讨论量增长趋势、第三方评测中的能力对比排名变化。",
+        "confidence": 0.76,
+        "evidence_strength": "medium",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 82,
+        "response_type": "monitoring",
+        "related_threat_dimension": "user_substitution",
+        "competitor": "OpenAI Codex",
+        "concrete_action": "在未来 2 周内系统采集 Reddit、Hacker News 上关于 OpenAI Codex 的用户替代讨论，产出用户替代压力专题报告。",
+        "evidence_basis": "OpenAI Codex 用户替代得分 63（中高），但社区证据缺失，证据强度不足。",
+        "monitoring_signal": "采集到的社区帖子数量、用户替代案例数、情感极性分布。",
+        "confidence": 0.7,
+        "evidence_strength": "weak",
+        "requires_human_confirmation": false
+      },
+      {
+        "priority": 78,
+        "response_type": "monitoring",
+        "related_threat_dimension": "capability_catch_up",
+        "competitor": "OpenAI Codex",
+        "concrete_action": "购买或订阅 Faros AI、Qodo Blog 等第三方基准评测报告，验证 OpenAI Codex 的能力声明，2 周内完成评估。",
+        "evidence_basis": "OpenAI Codex 能力追赶得分 79，但 benchmark 源缺失，证据强度不足。",
+        "monitoring_signal": "第三方评测中 OpenAI Codex 与 Copilot 在 SWE-bench、HumanEval 等基准上的得分差距变化。",
+        "confidence": 0.72,
+        "evidence_strength": "weak",
+        "requires_human_confirmation": false
+      },
+      {
+        "priority": 75,
+        "response_type": "growth",
+        "related_threat_dimension": "user_substitution",
+        "competitor": "Cursor (Anysphere)",
+        "concrete_action": "针对 Cursor 的 AI 原生 IDE 体验，在 Copilot 中推出『沉浸式编码模式』Beta，降低 IDE 切换成本，并定向邀请 100 位流失用户参与测试。",
+        "evidence_basis": "Cursor 用户替代得分 68，500 万周活，AI原生IDE定位社区证据充分。",
+        "monitoring_signal": "Beta 用户留存率、NPS、与 Cursor 功能对标满意度。",
+        "confidence": 0.8,
+        "evidence_strength": "medium",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 68,
+        "response_type": "strategy",
+        "related_threat_dimension": "strategic_expansion",
+        "competitor": "通义灵码 (Alibaba Cloud)",
+        "concrete_action": "评估通义灵码在亚太市场的分发策略，启动与国内云平台（阿里云之外）的联合推广试点，降低其分发优势对 Copilot 的挤压。",
+        "evidence_basis": "通义灵码分发得分 58，日均 30 亿次调用、200 万开发者，战略扩张得分 48，但社区和 benchmark 证据不足。",
+        "monitoring_signal": "通义灵码在中国区外的用户增长数据、与阿里云之外的平台合作动向。",
+        "confidence": 0.65,
+        "evidence_strength": "weak",
+        "requires_human_confirmation": true
+      }
+    ],
+    "expansion_likelihood": 0.0,
+    "report_sections": {
+      "executive_summary": "最高威胁竞品为 OpenAI Codex，综合得分 70（高），其能力追赶维度达 79，多Agent并行与Computer Use能力直接挑战 Copilot 的编码工作流。Cursor 以 63 分紧随其后，AI原生IDE定位和 500 万周活构成用户替代压力。Claude Code 得分 59，在复杂多文件任务上社区共识替代性强，但分发渠道薄弱。通义灵码得分 44，分发规模巨大但能力证据不足。Qodo 和 Roo Code 威胁较低。",
+      "key_findings": "1. OpenAI Codex 综合得分 70，是当前唯一高威胁竞品；能力追赶得分 79，但社区与第三方基准证据仍不足。\n2. Cursor 综合得分 63，AI 原生 IDE 定位和 500 万周活使其用户替代压力最明确。\n3. Claude Code 综合得分 59，复杂多文件任务能力获得社区认可，但分发渠道相对薄弱。\n4. 通义灵码综合得分 44，阿里云生态带来分发优势，但能力和用户迁移证据不足。\n5. Qodo 与 Roo Code 当前威胁较低，前者偏代码质量平台，后者主要形成开源替代压力。",
+      "landscape": "竞品格局涵盖 Agent 编码工具（OpenAI Codex、Claude Code、Windsurf）、AI 原生 IDE（Cursor）、开源替代（Roo Code）、代码质量平台（Qodo）以及区域生态型工具（通义灵码）。OpenAI Codex 和 Cursor 在能力和用户替代维度领先；Claude Code 和 Windsurf 在自主性上形成差异化；通义灵码依赖阿里云生态分发；Qodo 和 Roo Code 定位非替代性。",
+      "competitor_profiles": "OpenAI Codex：Agent 编码工具，最强维度为能力追赶；官方证据强，但社区与基准证据不足。\nCursor：AI 原生 IDE，最强维度为用户替代；活跃用户证据明确，仍需验证企业迁移规模。\nClaude Code：终端式 Agent 编码工具，复杂多文件任务能力突出；社区证据较强，分发数据不足。\nWindsurf：强调自主工作流的 AI IDE；能力差异化可见，但持续使用与商业扩张证据有限。\n通义灵码：依托阿里云生态的区域型工具，分发潜力突出；能力与用户迁移证据不足。\nQodo：以代码质量和审查为主，直接替代性有限。\nRoo Code：开源可定制替代，成本与灵活性有吸引力，但规模化采用证据不足。",
+      "key_debate": "两位分析师在用户替代和能力追赶维度存在 0.2 的 delta，主要源于对 OpenAI Codex 和通义灵码的证据强度判断差异。QA 调和后：OpenAI Codex 因官方来源质量极高（100）但社区和基准缺失，调和为高威胁但证据不足；通义灵码因 SWOT 赋予更高扩张风险但缺乏社区验证，调和为 medium-low。",
+      "risk_opportunity": "即时风险：OpenAI Codex 的 Agent 能力和 Cursor 的原生 IDE 体验可能直接分流专业开发者。\n战略机会：利用 GitHub 工作流、企业治理与生态分发优势，缩小 Agent 能力差距并强化企业迁移壁垒。\n观察信号：OpenAI Codex 的社区替代讨论与第三方基准、Cursor 的企业迁移率、通义灵码在亚太市场的生态分发进展。",
+      "threat_assessment": "OpenAI Codex（70 分，高）：能力追赶 79 为全矩阵最高，多Agent并行+Computer Use 直接威胁 Copilot 工作流。我们的防御能力体现在 IDE 集成深度和 GitHub 生态，但能力差距需快速弥补。Cursor（63 分，中）：500 万周活和 AI 原生体验构成用户替代压力 68，分发 52 和战略扩张 58 显示其生态扩张意图。我们的防御优势在于企业级合规和现有用户基础。Claude Code（59 分，中）：用户替代 72 和能力追赶 72 均为高，但分发 35 是明显短板。我们的防御重点应放在渠道锁定和 IDE 集成。Windsurf（51 分，中）：Flows 自主性获社区认可，但分发 33 和战略扩张 48 限制其威胁。通义灵码（44 分，中低）：分发 58 是唯一高维，但能力和替代证据不足，中国区外威胁有限。Qodo（36 分，低）和 Roo Code（28 分，低）威胁可控。",
+      "recommendations": "1. （优先级 88）产品：对标 OpenAI Codex 的多Agent能力，在 Copilot Agent 模式中实现等效功能。2. （优先级 82）监测：采集 OpenAI Codex 社区替代讨论，验证用户替代压力。3. （优先级 78）监测：购买第三方基准评测验证 OpenAI Codex 能力声明。4. （优先级 75）增长：针对 Cursor 推出『沉浸式编码模式』Beta，降低用户流失。5. （优先级 68）战略：评估通义灵码亚太分发策略，启动与国内云平台的联合推广。6. （优先级 62）监测：建立 Copilot 口碑监测面板，自动识别用户流失信号。",
+      "methodology": "本报告先确认 GitHub Copilot 的研究范围，再按 O/B/C/L（官方、基准、社区、前瞻信号）检查证据可用性。能力持久性分析使用 VRIO（价值性、稀缺性、难模仿性、组织支撑）判断竞品能力能否形成持续壁垒；市场动态分析使用 SWOT（优势、劣势、机会、威胁）判断市场条件和目标产品暴露面如何转化为替代或扩张压力。QA 按证据强度调和两种方法的分歧，而非机械平均评分；Quality Gate 检查矩阵完整性、证据覆盖与行动可执行性。当前主要限制是部分竞品缺少可引用社区正文和独立基准。"
+    },
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:44:33.680013+00:00"
+  }
+]

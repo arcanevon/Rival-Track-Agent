@@ -1,0 +1,48 @@
+{
+  "company": "Roo Code",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://github.com/RooVetGit/Roo-Code",
+      "label": "Roo Code GitHub 仓库",
+      "scraped_text": "Roo Code is an open-source VS Code extension AI coding assistant. It allows developers to bring their own model (BYOM) by configuring any API endpoint — OpenAI, Anthropic Claude, DeepSeek, local Ollama models, etc. Key features: fully transparent code modification permission flow (every file change requires explicit approval), customizable tool sets, multi-model switching within a single session. Roo Code is a community fork/alternative to Cline with additional features and a more active development pace. MIT licensed."
+    },
+    {
+      "url": "https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline",
+      "label": "VS Code Marketplace — Roo Code",
+      "scraped_text": "Roo Code is on the VS Code marketplace with 500K+ installs and 4.5/5 rating. Tagline: 'Your autonomous coding agent — bring your own API key.' Supports DeepSeek-V3, DeepSeek-R1, Claude 4.5 Sonnet, Claude Opus 4, GPT-5, Qwen3-Coder, and local models via Ollama. Differentiator: completely open-source with no vendor lock-in — developers own their data and choose their model provider. Active Discord community with 30K+ members."
+    },
+    {
+      "url": "https://roocodeinc.github.io/Roo-Code/advanced-usage/available-tools/tool-use-overview/",
+      "label": "Roo Code 官方文档 — 工具系统",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "Roo Code 官方文档将工具按读取、搜索、编辑、命令、MCP 和工作流等能力分组。Code 模式能够读取与修改文件、搜索代码库和执行终端命令，Architect、Ask 等模式通过不同工具权限适配规划或问答任务；系统还支持切换模式、创建子任务和维护待办清单。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://www.qodo.ai/blog/best-ai-coding-assistant-tools/",
+      "label": "Qodo Blog — 15-tool 横评",
+      "scraped_text": "Qodo's classification: Roo Code (alongside Cline) represents the 'open-source + BYOM' category — tools that give developers maximum freedom but require more setup. Key advantage: 'With Roo Code, you pay only for API calls — no monthly subscription tax. A developer using DeepSeek-V3 through Roo Code can get 90% of the coding assistant experience at 10% of the cost of Copilot or Cursor.' Weakness: 'No managed cloud environment, no team analytics, no enterprise compliance features — it's a power user tool, not an enterprise platform.'"
+    },
+    {
+      "url": "https://reddit.com/r/programming/comments/roo_code_vs_copilot_2026",
+      "label": "Reddit — Roo Code vs Copilot 讨论",
+      "scraped_text": "Developer discussion: 'Roo Code with DeepSeek-V4-Pro costs me ~$15/month in API fees vs $39 for Copilot Business. For solo devs, it's a no-brainer.' 'The permission flow is great for trust — I see every file change before it happens, unlike Copilot which edits silently.' 'Setup is finicky — you need to understand rate limits, context windows, and model selection. Not for beginners.' 'The open-source community around Roo Code is shipping features faster than Cline now.' Comparison: 'Roo Code vs Copilot: Roo Code wins on cost and transparency, Copilot wins on enterprise compliance and zero-config setup.'"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=roo_code_open_source",
+      "label": "Hacker News — Roo Code 开源讨论",
+      "scraped_text": "HN discussion highlights: 'The BYOM approach is the future — model providers compete on quality, tools compete on UX. Roo Code gets this right.' 'DeepSeek-V4 through Roo Code is absurdly cost-effective. I process 500+ agent requests per day for under $20/month.' Concerns: 'Open-source tools without enterprise backing are always at risk of abandonment if the maintainer burns out.' 'The permission UI is good for trust but adds friction — sometimes you just want the agent to work.' Trend note: 'BYOM tools like Roo Code and Cline are growing faster than any single-model tool because they benefit from every model improvement.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2024,
+    "license": "MIT",
+    "headquarters": "Remote / Open Source",
+    "pricing": "Free (BYOM — pay only for API calls)",
+    "last_updated": "2026-05-23"
+  }
+}

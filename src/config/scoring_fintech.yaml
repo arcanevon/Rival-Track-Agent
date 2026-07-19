@@ -1,0 +1,20 @@
+scoring:
+  name_token_match: 30
+  keyword_match: 20
+  review_keyword_match: 8
+  official_domain_bonus: 40
+  content_path_bonus: 30
+  review_path_bonus: 15
+  download_path_penalty: -50
+  aggregator_domain_penalty: -30
+  baike_penalty: -25
+  low_quality_domain_penalty: -120
+  low_quality_marker_penalty: -120
+  csdn_non_official_penalty: -35
+path_rules:
+  content_paths: [rates, fees, about, security, 费率, 安全, 合规]
+  review_paths: [review, compare, 评测, 对比]
+  download_paths:
+    - download
+    - install
+    - 下载

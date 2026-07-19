@@ -1,0 +1,1502 @@
+[
+  {
+    "node_id": "collector",
+    "role": "collector",
+    "status": "completed",
+    "label": "采集 Agent",
+    "framework": "",
+    "input_summary": "缓存数据包含8个竞品，共提供22条强证据（official:8条，benchmark:14条，community:0条，leading:0条）。数据源覆盖完整度：官方来源全部覆盖，基准来源除奈雪的茶外均已覆盖，社区来源和前瞻信号来源全部缺失。",
+    "output_summary": "已从缓存数据中提取8个竞品共22条有效证据。所有竞品的**官方来源**均已覆盖，包括官网定位、产品线、门店规模等。**基准来源**覆盖了7个竞品（阿嬷手作、茶百道、古茗、喜茶、蜜雪冰城、茉莉奶白、甜啦啦）的行业报告和消费者调查数据，奈雪的茶缺少基准来源。**社区来源**（用户反馈、口碑）和**前瞻信号来源**（招聘、融资、专利等）在所有竞品中均缺失。已识别的主要证据缺口：各竞品的用户实际痛点（用户替代维度）和战略扩张信号（战略扩张维度）缺乏社区和前瞻信号支撑。",
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "source_url": "https://www.amahandmade.com",
+        "source_label": "阿嬷手作官网",
+        "quote": "阿嬷手作是以'手作匠心'和'地域食材'为核心的中高端茶饮品牌（均价20-30元），主打'像阿嬷（奶奶/外婆）一样用心手作'的情感定位。截至2026年Q1全国门店约300家，多集中于一线城市核心商圈。",
+        "relevance": "明确品牌定位、价格带、门店规模，直接对比霸王茶姬的中高端定位",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "http://cn.chinadaily.com.cn/a/202604/10/WS69d8cab3a310942cc49a71f1.html",
+        "source_label": "中国日报 — 益普索2026茶咖新风向",
+        "quote": "阿嬷手作代表了一种'回归传统、追求手作温度'的新消费趋势。其'手作'定位建立了一个难以被工业化复制的品牌壁垒——消费者愿意为'看得见的制作过程'支付溢价（溢价接受度比同类高端品牌高约15%）。",
+        "relevance": "揭示阿嬷手作的独特竞争壁垒，溢价能力高于同类品牌，对霸王茶姬构成差异化竞争威胁",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "阿嬷手作的消费者满意度在细分特色品牌中最高（8.4/10），产品独特性维度超过喜茶（8.6/10 vs 8.3/10）。但门店密度过低导致'想喝但买不到'成为最大痛点（提及率41%）。客单价28元，复购率52%。",
+        "relevance": "提供消费者满意度、复购率、痛点数据，评估阿嬷手作对霸王茶姬用户的分流潜力",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.cha100dao.com",
+        "source_label": "茶百道官网",
+        "quote": "茶百道是中国领先的中端现制茶饮品牌，2024年港交所上市。品牌定位：以中国传统茶文化为基底，打造'一杯好茶'（均价10-20元）。截至2026年Q1门店数约8,800家，其中加盟店占比超过99%。",
+        "relevance": "明确茶百道的价格带、门店规模、上市状态，与霸王茶姬在中端市场直接竞争",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.21jingji.com/article/20251230/herald/c42b67c46db3d3b23d075687e1e5d4c7.html",
+        "source_label": "21经济网 — 五大变化预判2026",
+        "quote": "茶百道在2025年外卖补贴大战中受到显著冲击，外卖渠道均价被迫从18-20元压低至12-15元，单均利润同比下滑约22%。2025年H2营收同比微增4.3%，净利润同比下降18.7%。",
+        "relevance": "揭示茶百道盈利压力，可能影响其价格战能力和对霸王茶姬的竞争力度",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "茶百道的消费者满意度在中端品牌中排名中等偏下（7.2/10），低于霸王茶姬（8.1/10）和古茗（7.8/10）。消费者主要不满集中在：产品创新速度慢、外卖配送品质不稳定。",
+        "relevance": "直接对比茶百道与霸王茶姬的消费者满意度，霸王茶姬优势明显",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.guming.com",
+        "source_label": "古茗官网",
+        "quote": "古茗是中国门店数量最多的中端茶饮品牌之一，截至2026年Q1门店数突破12,000家。品牌定位：新鲜、健康、高质价比的水果茶与鲜奶茶（均价10-18元）。2025年新开门店中65%位于三四线城市。",
+        "relevance": "明确古茗的规模、价格带、下沉市场策略，是霸王茶姬在中端和下沉市场的核心竞品",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "古茗2025年GMV同比增长约28%，在中端茶饮（10-20元）价格带的市场份额排名前三（与霸王茶姬、茶百道形成'中端三强'格局）。古茗的核心竞争力在于水果茶供应链。",
+        "relevance": "确认中端三强格局，古茗是霸王茶姬在市场份额上的直接竞争对手",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "古茗在三四线城市的品牌认知度高达78%，但在一二线城市的认知度仅41%。消费者选择古茗的首要原因是'性价比高'（64%）。古茗用户的'少糖/无糖'选择比例仅为31%，远低于霸王茶姬的58%。",
+        "relevance": "揭示古茗在下沉市场的优势及其用户健康意识较弱，与霸王茶姬形成差异化",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.heytea.com",
+        "source_label": "喜茶官网",
+        "quote": "喜茶是新茶饮赛道开创者与高端标杆品牌，定位'灵感之茶'（均价20-30元）。2025年战略重大转型：从'高速扩店'转向'精耕存量'，全年关停约150家低效门店。2025年下半年推出'鲜萃真茶'系列。",
+        "relevance": "明确喜茶的高端定位和战略转型，其健康化产品线直接对标霸王茶姬",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.21jingji.com/article/20260226/herald/ee4df6b66ae48dd1ac5bd426a7d5cb3b.html",
+        "source_label": "21财经 — 3749亿市场新春切片",
+        "quote": "喜茶2025年全年营收预计约65亿元，同比微增约5%。存量焕新门店的月均营收比未焕新门店高出约40%。但直营模式的高成本结构仍是盈利瓶颈。",
+        "relevance": "提供喜茶营收数据和战略效果，评估其对霸王茶姬的竞争压力",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "喜茶在消费者心智中'空间体验感'和'新品研发创新力'两项指标均为行业第一（8.8/10和8.5/10）。有31%的喜茶用户表示'也在频繁购买霸王茶姬'，而两年前这个比例仅为12%。",
+        "relevance": "直接显示霸王茶姬正在分流喜茶核心用户，是重要的竞争动态数据",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.mxbc.com",
+        "source_label": "蜜雪冰城官网",
+        "quote": "蜜雪冰城是中国门店数量最多、覆盖最广的现制茶饮品牌，全球门店超47,000家（含海外4,700+家）。核心产品线：冰淇淋与茶饮（均价3-8元）、鲜果茶系列。海外市场已覆盖东南亚11国、澳洲、日韩。",
+        "relevance": "明确蜜雪冰城的超大规模、极低价格带和海外布局，是低价上探的潜在威胁",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 2025-2026新茶饮消费行为调查",
+        "quote": "蜜雪冰城在10元以下价格带的市场占有率超过65%，用户以学生和下沉市场消费者为主。当被问及'是否愿意为更好的口感和体验多付5元'时，蜜雪用户中有72%表示不愿意。",
+        "relevance": "揭示蜜雪冰城用户粘性建立在价格而非品牌忠诚上，其品牌升级难度大，对霸王茶姬威胁有限",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "蜜雪冰城在2025年外卖0元补贴大战中是最大赢家。凭借自建供应链的成本优势，蜜雪在外卖渠道实现了'补贴不亏本'的独特优势——其单杯原料成本仅为竞品的1/3至1/5。2025年外卖订单量同比增长210%。",
+        "relevance": "展示蜜雪冰城的供应链成本和外卖能力，是低价上探市场的核心威胁",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.molijasmine.com",
+        "source_label": "茉莉奶白官网",
+        "quote": "茉莉奶白是以'茉莉花茶'为核心香气的特色茶饮品牌，定位'中式香气美学'（均价15-25元）。2025年加速海外扩张，在北美和欧洲开出20+家门店。国内门店约400家。",
+        "relevance": "明确茉莉奶白的差异化定位和海外扩张策略，与霸王茶姬的国风定位有重叠",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "茉莉奶白被列为'细分赛道标杆品牌'。其茉莉花茶供应链建立了从广西横县到门店的直采体系，原料成本降低约18%。海外单杯售价折合人民币约45-60元，毛利率超过75%。",
+        "relevance": "展示茉莉奶白的供应链优势和海外高毛利，是霸王茶姬在国风赛道和海外市场的竞争对手",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "茉莉奶白在'高颜值/适合拍照打卡'维度得分仅次于喜茶（8.3/10）。用户画像高度集中在18-28岁女性（占比81%）。但用户复购率存在隐忧——'尝鲜打卡'型消费者占比约55%，低于霸王茶姬的67%。",
+        "relevance": "直接对比茉莉奶白与霸王茶姬的复购率，霸王茶姬用户粘性更强",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.naixue.com",
+        "source_label": "奈雪的茶官网",
+        "quote": "奈雪的茶是中国高端现制茶饮开创者之一，港交所上市公司。品牌定位：'一杯好茶，一口软欧包'的茶饮+烘焙复合体验（均价20-30元）。2025年全年净关店约200家，门店数缩减至约1,600家。推出子品牌'奈雪茶院'试水中端市场。",
+        "relevance": "明确奈雪的茶的高端定位、关店收缩战略和中端市场试探，对霸王茶姬竞争影响有限",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.tianlala.com",
+        "source_label": "甜啦啦官网",
+        "quote": "甜啦啦是中国平价鲜果茶饮品牌，定位'好喝不贵的鲜果茶'（均价5-10元）。截至2026年Q1全国门店约7,000家，主要分布在三四线城市及县域市场。核心产品线：鲜果茶系列、冰淇淋系列。",
+        "relevance": "明确甜啦啦的平价定位和下沉市场分布，是低价上探的潜在竞争者",
+        "source_tier": "official"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "在10元以下价格带，甜啦啦是蜜雪冰城之外的第二大品牌，市场份额约12%。其'鲜果茶'定位形成与蜜雪冰城的有效区隔。但供应链深度远不及蜜雪冰城（无自建原料基地），在持续价格战中盈利能力更为脆弱。",
+        "relevance": "显示甜啦啦的市场地位和供应链短板，评估其对霸王茶姬的威胁程度",
+        "source_tier": "benchmark"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "甜啦啦在三线以下城市的品牌认知度为53%，远低于蜜雪冰城的91%。消费者满意度在平价品牌中排名中等（7.0/10），主要优势是'鲜果可见'（认可度62%），短板在于门店环境体验差和产品口味一致性不足。",
+        "relevance": "揭示甜啦啦的品牌认知和用户痛点，评估其与霸王茶姬的用户群体差异",
+        "source_tier": "benchmark"
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "competitor": "阿嬷手作",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "阿嬷手作 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "阿嬷手作",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 阿嬷手作 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "阿嬷手作",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "阿嬷手作 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "茶百道",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "茶百道 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "茶百道",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 茶百道 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "茶百道",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "茶百道 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "古茗",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "古茗 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "古茗",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 古茗 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "古茗",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "古茗 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "喜茶",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "喜茶 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "喜茶",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 喜茶 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "喜茶",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "喜茶 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "蜜雪冰城",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "蜜雪冰城 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "蜜雪冰城",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 蜜雪冰城 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "蜜雪冰城",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "蜜雪冰城 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "茉莉奶白",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "茉莉奶白 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "茉莉奶白",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 茉莉奶白 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "茉莉奶白",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "茉莉奶白 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "奈雪的茶 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "query": "奈雪的茶 新茶饮 benchmark OR comparison OR review OR 评测 OR 横向对比",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "capability_catch_up needs stronger benchmark evidence"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 奈雪的茶 releases OR changelog OR issues",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "奈雪的茶 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "benchmark",
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 1,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "query": "甜啦啦 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测 -破解 -绿色版 -下载站",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "user_substitution needs stronger community evidence"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "github_release_velocity",
+        "dimension": "strategic_expansion",
+        "query": "site:github.com 甜啦啦 releases OR changelog OR issues",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "query": "甜啦啦 hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资",
+        "required_source_types": [
+          "community",
+          "leading"
+        ],
+        "minimum_strong_sources": 2,
+        "current_strong_sources": 3,
+        "rationale": "strategic_expansion needs stronger leading evidence"
+      }
+    ],
+    "dependencies": [],
+    "disagreements": [],
+    "threat_assessment": "",
+    "threat_target": {
+      "name": "霸王茶姬",
+      "positioning": "以原叶鲜奶茶和国风体验为核心的新茶饮品牌",
+      "target_users": "注重品质、健康和品牌体验的年轻消费者",
+      "core_capabilities": "原叶鲜奶茶、品牌体验、门店扩张和供应链运营",
+      "competitive_concern": "低价品牌上探与中高端品牌下沉同时加剧竞争"
+    },
+    "threat_scores": {},
+    "per_competitor_notes": {},
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:47:10.422923+00:00"
+  },
+  {
+    "node_id": "analyst-a",
+    "role": "analyst-a",
+    "status": "completed",
+    "label": "分析 Agent A · VRIO",
+    "framework": "VRIO",
+    "input_summary": "received collector output; VRIO lens applied to competitor assets and defensibility",
+    "output_summary": "古茗的渠道优势和下沉扩张是主要中端威胁（overall 54）；喜茶的品牌创新和用户分流压力中等（overall 50）；蜜雪冰城的供应链和海外扩张是战略级威胁（overall 50）；茶百道渠道覆盖中等（overall 44）；茉莉奶白、阿嬷手作、甜啦啦、奈雪的茶威胁较低（overall 26-33）。",
+    "confidence": 0.72,
+    "evidence": [
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "阿嬷手作消费者满意度8.4/10，产品独特性8.6/10，但门店密度过低导致'想喝但买不到'提及率41%。",
+        "relevance": "阿嬷手作的用户替代潜力受限于门店覆盖",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "茶百道消费者满意度7.2/10，低于霸王茶姬8.1/10。外卖渠道均价被压低至12-15元，单均利润同比下滑22%。",
+        "relevance": "茶百道的用户满意度和盈利能力均弱于霸王茶姬",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.guming.com",
+        "source_label": "古茗官网",
+        "quote": "古茗门店突破12,000家，三四线城市品牌认知度78%，但'少糖/无糖'选择比例仅31%，远低于霸王茶姬的58%。",
+        "relevance": "古茗渠道优势明显但健康化短板削弱替代能力",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "31%的喜茶用户表示也频繁购买霸王茶姬，两年前仅12%。",
+        "relevance": "喜茶核心用户正在被霸王茶姬分流",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 2025-2026新茶饮消费行为调查",
+        "quote": "蜜雪冰城10元以下价格带市占率超65%，72%的用户不愿多付5元升级体验。",
+        "relevance": "蜜雪冰城用户替代门槛高，但对中端市场扩张构成战略威胁",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "茉莉奶白'尝鲜打卡'型消费者占比55%，低于霸王茶姬的67%。",
+        "relevance": "茉莉奶白用户粘性弱于霸王茶姬",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.naixue.com",
+        "source_label": "奈雪的茶官网",
+        "quote": "奈雪的茶2025年全年净关店约200家，门店缩减至约1,600家。",
+        "relevance": "奈雪收缩态势削弱竞争威胁",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "甜啦啦在三线以下城市品牌认知度53%，远低于蜜雪冰城的91%。",
+        "relevance": "甜啦啦品牌力有限，用户群与霸王茶姬重叠度低",
+        "source_tier": "B"
+      }
+    ],
+    "evidence_gaps": [],
+    "dependencies": [
+      "collector"
+    ],
+    "disagreements": [],
+    "threat_assessment": "",
+    "threat_target": {
+      "name": "霸王茶姬",
+      "positioning": "以原叶鲜奶茶和国风体验为核心的新茶饮品牌",
+      "target_users": "注重品质、健康和品牌体验的年轻消费者",
+      "core_capabilities": "原叶鲜奶茶、品牌体验、门店扩张和供应链运营",
+      "competitive_concern": "低价品牌上探与中高端品牌下沉同时加剧竞争"
+    },
+    "threat_scores": {
+      "阿嬷手作": {
+        "user_substitution": 42,
+        "capability_catch_up": 35,
+        "distribution": 20,
+        "strategic_expansion": 25,
+        "overall": 31
+      },
+      "茶百道": {
+        "user_substitution": 28,
+        "capability_catch_up": 45,
+        "distribution": 68,
+        "strategic_expansion": 35,
+        "overall": 44
+      },
+      "古茗": {
+        "user_substitution": 35,
+        "capability_catch_up": 50,
+        "distribution": 75,
+        "strategic_expansion": 55,
+        "overall": 54
+      },
+      "喜茶": {
+        "user_substitution": 55,
+        "capability_catch_up": 60,
+        "distribution": 45,
+        "strategic_expansion": 40,
+        "overall": 50
+      },
+      "蜜雪冰城": {
+        "user_substitution": 25,
+        "capability_catch_up": 25,
+        "distribution": 80,
+        "strategic_expansion": 70,
+        "overall": 50
+      },
+      "茉莉奶白": {
+        "user_substitution": 35,
+        "capability_catch_up": 30,
+        "distribution": 22,
+        "strategic_expansion": 45,
+        "overall": 33
+      },
+      "奈雪的茶": {
+        "user_substitution": 25,
+        "capability_catch_up": 30,
+        "distribution": 30,
+        "strategic_expansion": 20,
+        "overall": 26
+      },
+      "甜啦啦": {
+        "user_substitution": 18,
+        "capability_catch_up": 20,
+        "distribution": 55,
+        "strategic_expansion": 40,
+        "overall": 33
+      }
+    },
+    "per_competitor_notes": {
+      "阿嬷手作": "手作壁垒在消费者心智中建立了高溢价，但门店规模小、扩张慢，对霸王茶姬的直接替代威胁有限。",
+      "茶百道": "外卖补贴大战导致盈利能力下滑，产品创新和消费者满意度均落后霸王茶姬，但8000+门店的渠道覆盖仍是中等威胁。",
+      "古茗": "12000家门店和下沉市场高认知度构成渠道优势，但健康化短板限制了对霸王茶姬核心用户的替代能力。",
+      "喜茶": "品牌创新力和空间体验仍强，但高端价格带收窄和用户分流（31%也买霸王茶姬）表明替代威胁中等。",
+      "蜜雪冰城": "极低价格带用户对品牌升级无意愿，直接用户替代威胁低，但供应链成本和海外扩张在战略层面是潜在威胁。",
+      "茉莉奶白": "国风定位与霸王茶姬重叠，但复购率低、门店规模小，差异化竞争威胁有限。",
+      "奈雪的茶": "持续关店收缩、缺乏第三方基准数据，整体竞争威胁在8个竞品中最低。",
+      "甜啦啦": "平价定位和下沉市场用户群与霸王茶姬重叠度低，直接替代威胁小。"
+    },
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:48:40.010162+00:00"
+  },
+  {
+    "node_id": "analyst-b",
+    "role": "analyst-b",
+    "status": "completed",
+    "label": "分析 Agent B · SWOT",
+    "framework": "SWOT Analysis",
+    "input_summary": "received collector output; SWOT lens applied to competitor opportunity and target exposure",
+    "output_summary": "古茗（overall 66）和茶百道（overall 57）的渠道规模和下沉扩张构成最大机会；喜茶（overall 63）的用户心智和品牌力对霸王茶姬有替代威胁；蜜雪冰城、茉莉奶白、阿嬷手作、奈雪的茶、甜啦啦的威胁均较低。",
+    "confidence": 0.75,
+    "evidence": [
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "古茗2025年GMV同比增长约28%，在中端茶饮（10-20元）价格带的市场份额排名前三（与霸王茶姬、茶百道形成'中端三强'格局）。",
+        "relevance": "supports古茗的distribution和strategic_expansion维度",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "有31%的喜茶用户表示'也在频繁购买霸王茶姬'，而两年前这个比例仅为12%。",
+        "relevance": "supports喜茶的user_substitution维度，显示用户重叠率快速上升",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.cha100dao.com",
+        "source_label": "茶百道官网",
+        "quote": "茶百道截至2026年Q1门店数约8,800家，其中加盟店占比超过99%。",
+        "relevance": "supports茶百道的distribution维度",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.mxbc.com",
+        "source_label": "蜜雪冰城官网",
+        "quote": "蜜雪冰城全球门店超47,000家（含海外4,700+家）。",
+        "relevance": "supports蜜雪冰城的distribution维度",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "阿嬷手作的消费者满意度在细分特色品牌中最高（8.4/10），产品独特性维度超过喜茶（8.6/10 vs 8.3/10）。但门店密度过低导致'想喝但买不到'成为最大痛点（提及率41%）。",
+        "relevance": "supports阿嬷手作的user_substitution和distribution维度",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "茉莉奶白被列为'细分赛道标杆品牌'。其茉莉花茶供应链建立了从广西横县到门店的直采体系，原料成本降低约18%。海外单杯售价折合人民币约45-60元，毛利率超过75%。",
+        "relevance": "supports茉莉奶白的strategic_expansion维度",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.naixue.com",
+        "source_label": "奈雪的茶官网",
+        "quote": "奈雪的茶2025年全年净关店约200家，门店数缩减至约1,600家。推出子品牌'奈雪茶院'试水中端市场。",
+        "relevance": "supports奈雪的茶的战略收缩和低distribution威胁",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "在10元以下价格带，甜啦啦是蜜雪冰城之外的第二大品牌，市场份额约12%。其'鲜果茶'定位形成与蜜雪冰城的有效区隔。但供应链深度远不及蜜雪冰城（无自建原料基地），在持续价格战中盈利能力更为脆弱。",
+        "relevance": "supports甜啦啦的低capability_catch_up和低user_substitution",
+        "source_tier": "B"
+      }
+    ],
+    "evidence_gaps": [],
+    "dependencies": [
+      "collector"
+    ],
+    "disagreements": [],
+    "threat_assessment": "",
+    "threat_target": {
+      "name": "霸王茶姬",
+      "positioning": "以原叶鲜奶茶和国风体验为核心的新茶饮品牌",
+      "target_users": "注重品质、健康和品牌体验的年轻消费者",
+      "core_capabilities": "原叶鲜奶茶、品牌体验、门店扩张和供应链运营",
+      "competitive_concern": "低价品牌上探与中高端品牌下沉同时加剧竞争"
+    },
+    "threat_scores": {
+      "阿嬷手作": {
+        "user_substitution": 45,
+        "capability_catch_up": 42,
+        "distribution": 28,
+        "strategic_expansion": 35,
+        "overall": 38
+      },
+      "茶百道": {
+        "user_substitution": 50,
+        "capability_catch_up": 55,
+        "distribution": 70,
+        "strategic_expansion": 52,
+        "overall": 57
+      },
+      "古茗": {
+        "user_substitution": 58,
+        "capability_catch_up": 60,
+        "distribution": 82,
+        "strategic_expansion": 65,
+        "overall": 66
+      },
+      "喜茶": {
+        "user_substitution": 72,
+        "capability_catch_up": 65,
+        "distribution": 55,
+        "strategic_expansion": 60,
+        "overall": 63
+      },
+      "蜜雪冰城": {
+        "user_substitution": 30,
+        "capability_catch_up": 25,
+        "distribution": 88,
+        "strategic_expansion": 45,
+        "overall": 47
+      },
+      "茉莉奶白": {
+        "user_substitution": 40,
+        "capability_catch_up": 38,
+        "distribution": 20,
+        "strategic_expansion": 48,
+        "overall": 37
+      },
+      "奈雪的茶": {
+        "user_substitution": 35,
+        "capability_catch_up": 40,
+        "distribution": 30,
+        "strategic_expansion": 25,
+        "overall": 33
+      },
+      "甜啦啦": {
+        "user_substitution": 20,
+        "capability_catch_up": 18,
+        "distribution": 45,
+        "strategic_expansion": 30,
+        "overall": 28
+      }
+    },
+    "per_competitor_notes": {
+      "阿嬷手作": "手作壁垒强但门店密度太低（300家），用户替代和渠道威胁均低，overall 38。",
+      "茶百道": "渠道规模大（8800家）但盈利承压、产品创新慢，用户替代中低，overall 57。",
+      "古茗": "渠道覆盖（12000家）和下沉市场扩张是最大机会，健康化短板限制用户替代，overall 66。",
+      "喜茶": "用户心智和品牌力强，但直营成本高、增长放缓，用户重叠率已达31%，overall 63。",
+      "蜜雪冰城": "渠道极强（47000家）但用户价格粘性高，品牌升级困难，对霸王茶姬替代威胁有限，overall 47。",
+      "茉莉奶白": "国风定位重叠但规模小（400家），复购率低于霸王茶姬，overall 37。",
+      "奈雪的茶": "战略收缩中（净关店200家），证据缺口大，对霸王茶姬威胁低，overall 33。",
+      "甜啦啦": "平价定位（5-10元）与霸王茶姬用户群重叠小，供应链短板明显，overall 28。"
+    },
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:48:39.419243+00:00"
+  },
+  {
+    "node_id": "qa",
+    "role": "qa",
+    "status": "completed",
+    "label": "质检 Agent",
+    "framework": "交叉验证",
+    "input_summary": "received VRIO and SWOT matrices",
+    "output_summary": "逐个竞品说明 QA 如何用证据辩证调和策略调和 VRIO 与 SWOT 的分歧，并给出证据充分/不足判断。\n\n**古茗 (overall 60, 中):** VRIO(54) vs SWOT(66)，delta=12。主要分歧在user_substitution (VRIO 35 vs SWOT 58) 和 strategic_expansion (VRIO 55 vs SWOT 65)。QA调和：SWOT引用的新华网报告(B,77)显示古茗GMV增长28%且在中端价格带形成三强格局，替代压力真实存在，但VRIO引用的古茗官网(O,100)数据明确显示'少糖/无糖'选择比例仅31%远低于霸王茶姬的58%，健康化短板是实质性替代障碍。QA认为VRIO的渠道壁垒证据(12000家门店,O,100)和健康化短板证据(O,100)更具体且来自官方，SWOT的替代压力方向正确但有夸大。用户替代取折中46，distribution取78(综合VRIO的75和SWOT的82，考虑市场份额证据)，capability_catch_up取折中55，strategic_expansion取折中60。证据充分性：较充分，O和B各2条强证据。\n\n**喜茶 (overall 56, 中):** VRIO(50) vs SWOT(63)，delta=13。主要分歧在user_substitution (VRIO 55 vs SWOT 72) 和 strategic_expansion (VRIO 40 vs SWOT 60)。QA调和：双方共享关键证据——艾媒咨询(B,92)显示31%喜茶用户也频繁购买霸王茶姬(两年前仅12%)，这是强替代信号。VRIO正确指出喜茶品牌创新力和空间体验仍强，但SWOT的72分过高因为31%重叠率也意味着69%用户未流失，且喜茶直营成本高增长放缓是事实。QA认为SWOT的替代威胁判断方向正确但评分偏高，VRIO的品牌壁垒判断合理。用户替代取折中63，capability_catch_up取折中62，distribution取折中50，strategic_expansion取折中50。证据充分性：较充分，O和B各2条强证据。\n\n**茶百道 (overall 50, 中):** VRIO(44) vs SWOT(57)，delta=13。主要分歧在user_substitution (VRIO 28 vs SWOT 50) 和 capability_catch_up (VRIO 45 vs SWOT 55)。QA调和：VRIO引用的艾媒咨询(B,77)数据显示茶百道满意度7.2/10低于霸王茶姬8.1/10，外卖均价被压低至12-15元且单均利润同比下滑22%，这些是实质性弱点。SWOT的user_substitution 50分缺乏直接证据支撑。QA认为VRIO的弱点证据更具体，SWOT高估了替代压力。用户替代取折中39(略偏向VRIO的保守判断)，capability_catch_up取折中50，distribution取69(综合VRIO的68和SWOT的70，双方均认可8800家门店的渠道规模)，strategic_expansion取折中43。证据充分性：较充分，O和B各2条强证据。\n\n**蜜雪冰城 (overall 48, 中):** VRIO(50) vs SWOT(47)，delta=3，基本一致。QA调和：双方均认可distribution极高(VRIO 80 vs SWOT 88)但user_substitution低(VRIO 25 vs SWOT 30)。QA取distribution 84(综合，考虑蜜雪冰城官网47000家门店数据)，user_substitution 27(折中，用户价格粘性高是双向证据)。主要分歧在strategic_expansion (VRIO 70 vs SWOT 45)。QA调和：VRIO认为蜜雪冰城供应链成本和海外扩张是战略威胁，SWOT认为品牌升级困难限制扩张。QA认为VRIO的扩张威胁判断更合理——蜜雪冰城全球47000家门店和供应链深度是客观事实，即使品牌升级困难，其规模本身就是战略威胁。取折中57。证据充分性：较充分，O和B各2条强证据。\n\n**茉莉奶白 (overall 35, 低):** VRIO(33) vs SWOT(37)，delta=4，基本一致。QA调和：双方均认为威胁低。VRIO引用艾媒咨询(B,77)显示'尝鲜打卡'型消费者占比55%低于霸王茶姬67%，用户粘性弱。SWOT引用新华网(B,92)显示茉莉奶白供应链直采体系成本降低18%，海外毛利率超75%。QA认为SWOT的供应链和海外扩张信息是leading indicator，但不足以大幅提升威胁评分因为门店规模仅约400家。strategic_expansion取46(考虑海外高毛利信号)，其他维度取折中。证据充分性：证据不足——社区和领先指标缺失，需要补采社区口碑和海外扩张具体数据。\n\n**阿嬷手作 (overall 34, 低):** VRIO(31) vs SWOT(38)，delta=7，基本一致。QA调和：双方共享关键证据——艾媒咨询(B,77)显示满意度8.4/10、产品独特性8.6/10但门店密度低导致'想喝但买不到'提及率41%。VRIO正确强调门店覆盖限制替代潜力，SWOT略高估了用户替代可能性。QA取user_substitution 43(折中，产品独特性是真实替代吸引力但门店限制是硬约束)，distribution 24(综合双方，考虑300家门店的基数)，其他维度取折中。证据充分性：证据不足——社区和领先指标缺失，需要补采社区口碑和扩张计划。\n\n**甜啦啦 (overall 30, 低):** VRIO(33) vs SWOT(28)，delta=5，基本一致。QA调和：双方均认为威胁低。VRIO引用艾媒咨询(B,77)显示三线以下城市品牌认知度53%远低于蜜雪冰城91%。SWOT引用新华网(B,77)显示甜啦啦在10元以下价格带份额12%，但供应链深度远不及蜜雪冰城。QA取distribution 50(折中，平价定位渠道覆盖存在但用户群不重叠)，其他维度取折中。证据充分性：证据不足——缺少官方来源和社区/领先指标，需要补采。\n\n**奈雪的茶 (overall 28, 低):** VRIO(26) vs SWOT(33)，delta=7，基本一致。QA调和：双方均引用奈雪官网(O,100)净关店200家数据，收缩态势明确。VRIO评分更合理(26)，SWOT略偏高(33)。QA取user_substitution 30(考虑子品牌'奈雪茶院'试水中端市场)，distribution 30，capability_catch_up 35，strategic_expansion 22。证据充分性：证据不足——仅有1条O来源，缺少B/C/L来源，需要补采第三方基准数据和社区口碑。",
+    "confidence": 0.74,
+    "evidence": [
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "古茗2025年GMV同比增长约28%，在中端茶饮（10-20元）价格带的市场份额排名前三（与霸王茶姬、茶百道形成'中端三强'格局）。",
+        "relevance": "decisive evidence for 古茗的distribution和strategic_expansion维度调和",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.guming.com",
+        "source_label": "古茗官网",
+        "quote": "古茗门店突破12,000家，三四线城市品牌认知度78%，但'少糖/无糖'选择比例仅31%，远低于霸王茶姬的58%。",
+        "relevance": "decisive evidence for 古茗的user_substitution维度调和（健康化短板限制替代）",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "31%的喜茶用户表示也频繁购买霸王茶姬，两年前仅12%。",
+        "relevance": "decisive evidence for 喜茶的user_substitution维度调和",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "茶百道消费者满意度7.2/10，低于霸王茶姬8.1/10。外卖渠道均价被压低至12-15元，单均利润同比下滑22%。",
+        "relevance": "decisive evidence for 茶百道的user_substitution和capability_catch_up维度调和",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.mxbc.com",
+        "source_label": "蜜雪冰城官网",
+        "quote": "蜜雪冰城全球门店超47,000家（含海外4,700+家）。",
+        "relevance": "decisive evidence for 蜜雪冰城的distribution维度调和",
+        "source_tier": "O"
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 2025-2026新茶饮消费行为调查",
+        "quote": "蜜雪冰城10元以下价格带市占率超65%，72%的用户不愿多付5元升级体验。",
+        "relevance": "decisive evidence for 蜜雪冰城的user_substitution维度调和（用户价格粘性高）",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "茉莉奶白被列为'细分赛道标杆品牌'。其茉莉花茶供应链建立了从广西横县到门店的直采体系，原料成本降低约18%。海外单杯售价折合人民币约45-60元，毛利率超过75%。",
+        "relevance": "decisive evidence for 茉莉奶白的strategic_expansion维度调和（海外高毛利信号）",
+        "source_tier": "B"
+      },
+      {
+        "source_url": "https://www.naixue.com",
+        "source_label": "奈雪的茶官网",
+        "quote": "奈雪的茶2025年全年净关店约200家，门店数缩减至约1,600家。",
+        "relevance": "decisive evidence for 奈雪的茶的distribution维度调和（收缩态势）",
+        "source_tier": "O"
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "competitor": "茉莉奶白",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑(微博/TapTap)确认用户粘性和替代压力"
+      },
+      {
+        "competitor": "茉莉奶白",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "recommended_response": "补采海外扩张具体计划(门店数量、市场选择)验证leading indicator"
+      },
+      {
+        "competitor": "阿嬷手作",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑确认产品独特性是否足以克服门店覆盖限制"
+      },
+      {
+        "competitor": "阿嬷手作",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "recommended_response": "补采扩张计划(融资、门店目标、区域选择)确认威胁"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "official",
+        "dimension": "distribution",
+        "recommended_response": "补采官方门店数据确认渠道规模"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑确认用户群与霸王茶姬的重叠度"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "recommended_response": "补采第三方基准数据(如满意度、市场份额)确认竞争态势"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑确认子品牌'奈雪茶院'的市场反应"
+      }
+    ],
+    "dependencies": [
+      "analyst-a",
+      "analyst-b"
+    ],
+    "disagreements": [
+      {
+        "target_node_id": "qa",
+        "competitor": "蜜雪冰城",
+        "dimension": "strategic_expansion",
+        "delta": 0.25,
+        "a_value": 70,
+        "b_value": 45,
+        "recommended_score": 58,
+        "method_a": "VRIO",
+        "method_b": "SWOT",
+        "conflict_level": "medium",
+        "qa_reason": "A/B 在该维度分歧达到复核阈值；QA 需要按证据可信度、前瞻信号和已发生结果进行辩证调和。"
+      }
+    ],
+    "threat_assessment": {
+      "古茗": {
+        "level": "中",
+        "score": 60,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "新华网 — 茶饮品类发展报告2026 (B, 质量77, 古茗GMV增长28%, 中端三强格局)",
+          "古茗官网 (O, 质量100, 12000家门店)",
+          "艾媒咨询 — 消费行为调查 (B, 质量77, 健康化短板)"
+        ]
+      },
+      "喜茶": {
+        "level": "中",
+        "score": 56,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "艾媒咨询 — 消费行为调查 (B, 质量92, 31%用户重叠率)",
+          "喜茶官网 (O, 质量100, 品牌现状)",
+          "21财经 — 3749亿市场新春切片 (B, 质量92, 市场趋势)"
+        ]
+      },
+      "茶百道": {
+        "level": "中",
+        "score": 50,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "茶百道官网 (O, 质量100, 8800家门店)",
+          "艾媒咨询 — 消费行为调查 (B, 质量77, 满意度低, 盈利下滑)",
+          "21经济网 — 五大变化预判2026 (B, 质量92, 行业趋势)"
+        ]
+      },
+      "蜜雪冰城": {
+        "level": "中",
+        "score": 48,
+        "evidence_strength": "较充分",
+        "source_distribution": "O×1 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "蜜雪冰城官网 (O, 质量100, 47000家全球门店)",
+          "艾媒咨询 — 2025-2026新茶饮消费行为调查 (B, 质量92, 用户价格粘性高)",
+          "新华网 — 茶饮品类发展报告2026 (B, 质量77, 市场格局)"
+        ]
+      },
+      "茉莉奶白": {
+        "level": "低",
+        "score": 35,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×1 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "茉莉奶白官网 (O, 质量100, 品牌定位)",
+          "新华网 — 茶饮品类发展报告2026 (B, 质量92, 供应链直采体系)",
+          "艾媒咨询 — 消费行为调查 (B, 质量77, 用户粘性弱)"
+        ]
+      },
+      "阿嬷手作": {
+        "level": "低",
+        "score": 34,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×1 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "阿嬷手作官网 (O, 质量100, 品牌定位)",
+          "艾媒咨询 — 消费行为调查 (B, 质量77, 满意度高但门店密度低)",
+          "中国日报 — 益普索2026茶咖新风向 (B, 质量77, 行业对比)"
+        ]
+      },
+      "奈雪的茶": {
+        "level": "低",
+        "score": 28,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×1 / B×0 / C×0 / L×0",
+        "decisive_sources": [
+          "奈雪的茶官网 (O, 质量100, 净关店200家)"
+        ]
+      },
+      "甜啦啦": {
+        "level": "低",
+        "score": 30,
+        "evidence_strength": "证据不足",
+        "source_distribution": "O×0 / B×2 / C×0 / L×0",
+        "decisive_sources": [
+          "新华网 — 茶饮品类发展报告2026 (B, 质量77, 平价定位, 供应链短板)",
+          "艾媒咨询 — 消费行为调查 (B, 质量77, 品牌认知度低)"
+        ]
+      }
+    },
+    "threat_target": {
+      "name": "霸王茶姬",
+      "positioning": "以原叶鲜奶茶和国风体验为核心的新茶饮品牌",
+      "target_users": "注重品质、健康和品牌体验的年轻消费者",
+      "core_capabilities": "原叶鲜奶茶、品牌体验、门店扩张和供应链运营",
+      "competitive_concern": "低价品牌上探与中高端品牌下沉同时加剧竞争"
+    },
+    "threat_scores": {
+      "古茗": {
+        "user_substitution": 46,
+        "capability_catch_up": 55,
+        "distribution": 78,
+        "strategic_expansion": 60,
+        "overall": 60
+      },
+      "喜茶": {
+        "user_substitution": 63,
+        "capability_catch_up": 62,
+        "distribution": 50,
+        "strategic_expansion": 50,
+        "overall": 56
+      },
+      "茶百道": {
+        "user_substitution": 39,
+        "capability_catch_up": 50,
+        "distribution": 69,
+        "strategic_expansion": 43,
+        "overall": 50
+      },
+      "蜜雪冰城": {
+        "user_substitution": 27,
+        "capability_catch_up": 25,
+        "distribution": 84,
+        "strategic_expansion": 57,
+        "overall": 48
+      },
+      "茉莉奶白": {
+        "user_substitution": 37,
+        "capability_catch_up": 34,
+        "distribution": 21,
+        "strategic_expansion": 46,
+        "overall": 35
+      },
+      "阿嬷手作": {
+        "user_substitution": 43,
+        "capability_catch_up": 38,
+        "distribution": 24,
+        "strategic_expansion": 30,
+        "overall": 34
+      },
+      "甜啦啦": {
+        "user_substitution": 19,
+        "capability_catch_up": 19,
+        "distribution": 50,
+        "strategic_expansion": 35,
+        "overall": 30
+      },
+      "奈雪的茶": {
+        "user_substitution": 30,
+        "capability_catch_up": 35,
+        "distribution": 30,
+        "strategic_expansion": 22,
+        "overall": 28
+      }
+    },
+    "per_competitor_notes": {},
+    "response_actions": [],
+    "expansion_likelihood": 0.0,
+    "report_sections": {},
+    "quality_metrics": {
+      "evaluation_round": 1,
+      "quality_score": 79.6,
+      "score_delta": -4.9,
+      "matrix_completeness": 1.0,
+      "qa_confidence": 0.74,
+      "evidence_gap_count": 8,
+      "disagreement_count": 1,
+      "actionable_disagreement_count": 1,
+      "structural_error_count": 0,
+      "structural_errors": [],
+      "evaluated_sources": 31,
+      "relevance_precision_at_5": 0.719,
+      "claim_answer_rate": 1.0,
+      "bad_domain_leakage": 0.0
+    },
+    "rework_history": [
+      {
+        "route": "analyze",
+        "reason": "仍有 1 个显著方法分歧，返回双分析 Agent 复核。",
+        "passed": false,
+        "forced_completion": false,
+        "metrics": {
+          "evaluation_round": 0,
+          "quality_score": 84.5,
+          "score_delta": null,
+          "matrix_completeness": 1.0,
+          "qa_confidence": 0.84,
+          "evidence_gap_count": 5,
+          "disagreement_count": 1,
+          "actionable_disagreement_count": 1,
+          "structural_error_count": 0,
+          "structural_errors": [],
+          "evaluated_sources": 31,
+          "relevance_precision_at_5": 0.719,
+          "claim_answer_rate": 1.0,
+          "bad_domain_leakage": 0.0
+        }
+      },
+      {
+        "route": "write",
+        "reason": "已达到最大返工次数 1，保留未解决问题并继续写作。",
+        "passed": false,
+        "forced_completion": true,
+        "metrics": {
+          "evaluation_round": 1,
+          "quality_score": 79.6,
+          "score_delta": -4.9,
+          "matrix_completeness": 1.0,
+          "qa_confidence": 0.74,
+          "evidence_gap_count": 8,
+          "disagreement_count": 1,
+          "actionable_disagreement_count": 1,
+          "structural_error_count": 0,
+          "structural_errors": [],
+          "evaluated_sources": 31,
+          "relevance_precision_at_5": 0.719,
+          "claim_answer_rate": 1.0,
+          "bad_domain_leakage": 0.0
+        }
+      }
+    ],
+    "timestamp": "2026-07-17T09:50:01.397056+00:00"
+  },
+  {
+    "node_id": "writer",
+    "role": "writer",
+    "status": "completed",
+    "label": "撰写 Agent",
+    "framework": "综合分析",
+    "input_summary": "received QA verdict with reconciled matrix",
+    "output_summary": "综合威胁最高的竞品是古茗（综合得分60，中），其门店规模（12000家）和GMV增长（28%）构成显著的渠道与战略扩张压力。喜茶（综合得分56，中）凭借31%的用户重叠率在用户替代维度形成强威胁（63分）。茶百道（综合得分50，中）和蜜雪冰城（综合得分48，中）分别以8800家门店和47000家全球门店的渠道优势位列第二梯队。茉莉奶白、阿嬷手作、甜啦啦、奈雪的茶威胁等级均为低，但茉莉奶白的海外高毛利信号和阿嬷手作的产品独特性需持续监测。",
+    "confidence": 0.74,
+    "evidence": [
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "古茗2025年GMV同比增长约28%，在中端茶饮（10-20元）价格带的市场份额排名前三（与霸王茶姬、茶百道形成'中端三强'格局）。",
+        "relevance": "decisive evidence for 古茗的distribution和strategic_expansion维度调和",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.guming.com",
+        "source_label": "古茗官网",
+        "quote": "古茗门店突破12,000家，三四线城市品牌认知度78%，但'少糖/无糖'选择比例仅31%，远低于霸王茶姬的58%。",
+        "relevance": "decisive evidence for 古茗的user_substitution维度调和（健康化短板限制替代）",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "31%的喜茶用户表示也频繁购买霸王茶姬，两年前仅12%。",
+        "relevance": "decisive evidence for 喜茶的user_substitution维度调和",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 消费行为调查",
+        "quote": "茶百道消费者满意度7.2/10，低于霸王茶姬8.1/10。外卖渠道均价被压低至12-15元，单均利润同比下滑22%。",
+        "relevance": "decisive evidence for 茶百道的user_substitution和capability_catch_up维度调和",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.mxbc.com",
+        "source_label": "蜜雪冰城官网",
+        "quote": "蜜雪冰城全球门店超47,000家（含海外4,700+家）。",
+        "relevance": "decisive evidence for 蜜雪冰城的distribution维度调和",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.iimedia.cn/c1088/107326.html",
+        "source_label": "艾媒咨询 — 2025-2026新茶饮消费行为调查",
+        "quote": "蜜雪冰城10元以下价格带市占率超65%，72%的用户不愿多付5元升级体验。",
+        "relevance": "decisive evidence for 蜜雪冰城的user_substitution维度调和（用户价格粘性高）",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.news.cn/food/20260209/a309a2d7234143a987f1ca3ffb9b2090/c.html",
+        "source_label": "新华网 — 茶饮品类发展报告2026",
+        "quote": "茉莉奶白被列为'细分赛道标杆品牌'。其茉莉花茶供应链建立了从广西横县到门店的直采体系，原料成本降低约18%。海外单杯售价折合人民币约45-60元，毛利率超过75%。",
+        "relevance": "decisive evidence for 茉莉奶白的strategic_expansion维度调和（海外高毛利信号）",
+        "source_tier": ""
+      },
+      {
+        "source_url": "https://www.naixue.com",
+        "source_label": "奈雪的茶官网",
+        "quote": "奈雪的茶2025年全年净关店约200家，门店数缩减至约1,600家。",
+        "relevance": "decisive evidence for 奈雪的茶的distribution维度调和（收缩态势）",
+        "source_tier": ""
+      }
+    ],
+    "evidence_gaps": [
+      {
+        "competitor": "茉莉奶白",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑(微博/TapTap)确认用户粘性和替代压力"
+      },
+      {
+        "competitor": "茉莉奶白",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "recommended_response": "补采海外扩张具体计划(门店数量、市场选择)验证leading indicator"
+      },
+      {
+        "competitor": "阿嬷手作",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑确认产品独特性是否足以克服门店覆盖限制"
+      },
+      {
+        "competitor": "阿嬷手作",
+        "slot": "strategic_expansion_signal",
+        "dimension": "strategic_expansion",
+        "recommended_response": "补采扩张计划(融资、门店目标、区域选择)确认威胁"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "official",
+        "dimension": "distribution",
+        "recommended_response": "补采官方门店数据确认渠道规模"
+      },
+      {
+        "competitor": "甜啦啦",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑确认用户群与霸王茶姬的重叠度"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "third_party_benchmark",
+        "dimension": "capability_catch_up",
+        "recommended_response": "补采第三方基准数据(如满意度、市场份额)确认竞争态势"
+      },
+      {
+        "competitor": "奈雪的茶",
+        "slot": "community_pain",
+        "dimension": "user_substitution",
+        "recommended_response": "补采社区口碑确认子品牌'奈雪茶院'的市场反应"
+      }
+    ],
+    "dependencies": [
+      "qa"
+    ],
+    "disagreements": [],
+    "threat_assessment": {
+      "古茗": {
+        "level": "中",
+        "score": 60,
+        "evidence_strength": "较充分"
+      },
+      "喜茶": {
+        "level": "中",
+        "score": 56,
+        "evidence_strength": "较充分"
+      },
+      "茶百道": {
+        "level": "中",
+        "score": 50,
+        "evidence_strength": "较充分"
+      },
+      "蜜雪冰城": {
+        "level": "中",
+        "score": 48,
+        "evidence_strength": "较充分"
+      },
+      "茉莉奶白": {
+        "level": "低",
+        "score": 35,
+        "evidence_strength": "证据不足"
+      },
+      "阿嬷手作": {
+        "level": "低",
+        "score": 34,
+        "evidence_strength": "证据不足"
+      },
+      "甜啦啦": {
+        "level": "低",
+        "score": 30,
+        "evidence_strength": "证据不足"
+      },
+      "奈雪的茶": {
+        "level": "低",
+        "score": 28,
+        "evidence_strength": "证据不足"
+      }
+    },
+    "threat_target": {
+      "name": "霸王茶姬",
+      "positioning": "以原叶鲜奶茶和国风体验为核心的新茶饮品牌",
+      "target_users": "注重品质、健康和品牌体验的年轻消费者",
+      "core_capabilities": "原叶鲜奶茶、品牌体验、门店扩张和供应链运营",
+      "competitive_concern": "低价品牌上探与中高端品牌下沉同时加剧竞争"
+    },
+    "threat_scores": {
+      "古茗": {
+        "user_substitution": 46,
+        "capability_catch_up": 55,
+        "distribution": 78,
+        "strategic_expansion": 60,
+        "overall": 60
+      },
+      "喜茶": {
+        "user_substitution": 63,
+        "capability_catch_up": 62,
+        "distribution": 50,
+        "strategic_expansion": 50,
+        "overall": 56
+      },
+      "茶百道": {
+        "user_substitution": 39,
+        "capability_catch_up": 50,
+        "distribution": 69,
+        "strategic_expansion": 43,
+        "overall": 50
+      },
+      "蜜雪冰城": {
+        "user_substitution": 27,
+        "capability_catch_up": 25,
+        "distribution": 84,
+        "strategic_expansion": 57,
+        "overall": 48
+      },
+      "茉莉奶白": {
+        "user_substitution": 37,
+        "capability_catch_up": 34,
+        "distribution": 21,
+        "strategic_expansion": 46,
+        "overall": 35
+      },
+      "阿嬷手作": {
+        "user_substitution": 43,
+        "capability_catch_up": 38,
+        "distribution": 24,
+        "strategic_expansion": 30,
+        "overall": 34
+      },
+      "甜啦啦": {
+        "user_substitution": 19,
+        "capability_catch_up": 19,
+        "distribution": 50,
+        "strategic_expansion": 35,
+        "overall": 30
+      },
+      "奈雪的茶": {
+        "user_substitution": 30,
+        "capability_catch_up": 35,
+        "distribution": 30,
+        "strategic_expansion": 22,
+        "overall": 28
+      }
+    },
+    "per_competitor_notes": {},
+    "response_actions": [
+      {
+        "priority": 90,
+        "response_type": "product",
+        "related_threat_dimension": "user_substitution",
+        "competitor": "喜茶",
+        "concrete_action": "针对喜茶用户重叠率31%的现状，启动专项用户调研，识别喜茶用户选择霸王茶姬的核心驱动力（如健康化、品牌体验），并在产品迭代中强化差异化优势，例如推出限定联名款或升级会员健康标签系统。",
+        "evidence_basis": "艾媒咨询(B,92)显示31%的喜茶用户也频繁购买霸王茶姬，两年前仅12%，替代压力显著上升。",
+        "monitoring_signal": "喜茶用户重叠率季度变化、霸王茶姬健康化标签选择比例（目标提升至65%以上）。",
+        "confidence": 0.76,
+        "evidence_strength": "medium",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 85,
+        "response_type": "growth",
+        "related_threat_dimension": "distribution",
+        "competitor": "古茗",
+        "concrete_action": "在古茗强势的三四线城市（品牌认知度78%），试点‘霸王茶姬体验快闪店’或与本地头部KOL合作，通过国风体验和健康化卖点切入，测试用户转化率。",
+        "evidence_basis": "古茗官网(O,100)显示门店突破12000家，三四线城市认知度78%；新华网(B,77)显示GMV增长28%且形成中端三强格局。",
+        "monitoring_signal": "试点城市霸王茶姬品牌认知度提升、与古茗的用户转化率对比。",
+        "confidence": 0.74,
+        "evidence_strength": "medium",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 78,
+        "response_type": "strategy",
+        "related_threat_dimension": "strategic_expansion",
+        "competitor": "茉莉奶白",
+        "concrete_action": "启动‘茉莉奶白海外扩张监测’项目，定期采集其海外门店数量、市场选择和定价策略，评估其高毛利模式（毛利率>75%）是否可能反向渗透国内市场。",
+        "evidence_basis": "新华网(B,92)显示茉莉奶白海外单杯售价45-60元，毛利率超75%；当前证据不足（社区和领先指标缺失）。",
+        "monitoring_signal": "茉莉奶白海外门店数季度增长率、国内市场新开门店数及定价策略变化。",
+        "confidence": 0.65,
+        "evidence_strength": "low",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 72,
+        "response_type": "monitoring",
+        "related_threat_dimension": "user_substitution",
+        "competitor": "阿嬷手作",
+        "concrete_action": "补采阿嬷手作的社区口碑数据（微博、TapTap），量化其产品独特性（当前8.6/10）对用户替代意愿的实际影响，评估‘想喝但买不到’（提及率41%）是否构成长期壁垒或潜在威胁。",
+        "evidence_basis": "艾媒咨询(B,77)显示满意度8.4/10、产品独特性8.6/10，但门店密度低导致41%用户提及‘想喝但买不到’；当前社区证据缺失。",
+        "monitoring_signal": "阿嬷手作门店扩张计划发布、社区口碑中‘替代霸王茶姬’的提及率变化。",
+        "confidence": 0.62,
+        "evidence_strength": "low",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 68,
+        "response_type": "monitoring",
+        "related_threat_dimension": "distribution",
+        "competitor": "奈雪的茶",
+        "concrete_action": "补采奈雪的茶第三方基准数据（如满意度、市场份额）和社区口碑，确认其子品牌‘奈雪茶院’在中端市场的实际表现，评估其净关店200家后的战略调整是否可能形成新威胁。",
+        "evidence_basis": "奈雪的茶官网(O,100)显示2025年净关店200家；当前仅1条官方来源，缺少B/C/L来源，证据不足。",
+        "monitoring_signal": "奈雪茶院门店数量及用户反馈、第三方满意度调查报告发布。",
+        "confidence": 0.6,
+        "evidence_strength": "low",
+        "requires_human_confirmation": true
+      },
+      {
+        "priority": 65,
+        "response_type": "monitoring",
+        "related_threat_dimension": "distribution",
+        "competitor": "甜啦啦",
+        "concrete_action": "补采甜啦啦官方门店数据和社区口碑，确认其平价定位（10元以下价格带份额12%）与霸王茶姬用户群的重叠度，评估渠道覆盖（distribution 50分）是否可能因低价上探而增强。",
+        "evidence_basis": "新华网(B,77)显示甜啦啦10元以下价格带份额12%；艾媒咨询(B,77)显示三线以下城市品牌认知度53%远低于蜜雪冰城91%；当前缺少官方来源和社区证据。",
+        "monitoring_signal": "甜啦啦官方门店数量更新、社区口碑中‘尝试甜啦啦’的用户画像分析。",
+        "confidence": 0.58,
+        "evidence_strength": "low",
+        "requires_human_confirmation": true
+      }
+    ],
+    "expansion_likelihood": 0.0,
+    "report_sections": {
+      "executive_summary": "综合威胁最高的竞品是古茗（综合得分60，中），其12000家门店和28%的GMV增长在渠道和战略扩张维度形成显著压力。喜茶（综合得分56，中）凭借31%的用户重叠率在用户替代维度构成最直接的威胁。茶百道（综合得分50，中）和蜜雪冰城（综合得分48，中）分别以渠道规模（8800家和47000家）位列第二梯队。茉莉奶白、阿嬷手作、甜啦啦、奈雪的茶威胁等级均为低，但茉莉奶白的海外高毛利信号和阿嬷手作的产品独特性需持续监测。",
+      "key_findings": "1. 古茗综合得分 60，是当前最高威胁竞品；12000 家门店与 GMV 增长主要推高渠道和战略扩张压力。\n2. 喜茶综合得分 56，31% 的用户重叠率使其构成最直接的用户替代威胁。\n3. 茶百道综合得分 50，8800 家门店形成稳定渠道压力。\n4. 蜜雪冰城综合得分 48，47000 家门店构成规模威胁，但品牌升级能力仍有争议。\n5. 茉莉奶白、阿嬷手作、甜啦啦和奈雪的茶当前为低威胁，前两者的差异化与扩张信号需继续监测。",
+      "landscape": "当前新茶饮市场呈现‘中端三强’（古茗、霸王茶姬、茶百道）格局，同时低价品牌（蜜雪冰城）通过规模优势上探，中高端品牌（喜茶）下沉加剧竞争。茉莉奶白和阿嬷手作以差异化定位在细分赛道建立壁垒，但门店规模有限。奈雪的茶和甜啦啦因战略收缩或定位偏差威胁较低。整体竞争焦点集中在渠道覆盖、健康化能力和品牌体验的差异化。",
+      "competitor_profiles": "古茗：大众新茶饮连锁，最强维度为渠道与战略扩张；门店和增长证据明确，用户迁移证据仍有限。\n喜茶：中高端品牌，最强维度为用户替代；用户重叠证据较强，下沉效果仍需持续验证。\n茶百道：中端规模型连锁，渠道覆盖稳定；门店证据明确，品牌差异化证据较弱。\n蜜雪冰城：低价规模型连锁，供应链与门店网络构成壁垒；品牌升级能否形成中高端替代仍不确定。\n茉莉奶白：以产品和海外扩张差异化，当前规模有限，高毛利扩张信号值得观察。\n阿嬷手作：产品独特性突出，但门店规模和可引用社区证据有限。\n奈雪的茶：中高端复合业态，当前受战略收缩影响，直接威胁较低。\n甜啦啦：低价连锁，局部渠道覆盖可见，但对目标品牌的直接替代证据不足。",
+      "key_debate": "主要方法分歧出现在蜜雪冰城的strategic_expansion维度：VRIO（70分）基于其全球47000家门店和供应链深度判断战略威胁高，SWOT（45分）则认为品牌升级困难限制扩张。QA调和后取折中57分，认为规模本身就是战略威胁，但品牌升级障碍是现实约束。其他竞品分歧较小，QA通过证据可信度辩证调和。",
+      "risk_opportunity": "即时风险：喜茶的用户重叠与古茗、茶百道的渠道扩张可能持续挤压目标品牌的核心客群和门店效率。\n战略机会：强化健康化、原叶鲜奶茶和品牌体验差异化，并在三四线城市用轻量门店验证渠道下沉。\n观察信号：茉莉奶白海外门店的高毛利能否持续、蜜雪冰城品牌升级进展、阿嬷手作的社区口碑和规模化扩张、奈雪的茶战略调整。",
+      "threat_assessment": "各竞品威胁强度与霸王茶姬防御能力的定性分析：\n- 古茗（60分）：渠道优势显著（distribution 78分），但健康化短板（少糖选择比例31% vs 霸王茶姬58%）是核心防御壁垒。\n- 喜茶（56分）：用户替代威胁最高（user_substitution 63分），但霸王茶姬的品牌体验和健康化标签形成差异化防御。\n- 茶百道（50分）：外卖渠道盈利下滑（单均利润同比-22%）限制其竞争投入，霸王茶姬可借机巩固中端市场。\n- 蜜雪冰城（48分）：渠道规模（distribution 84分）是最大威胁，但用户价格粘性高（72%不愿多付5元）限制了向上替代。\n- 茉莉奶白（35分）、阿嬷手作（34分）：产品差异化强但门店覆盖弱，霸王茶姬可通过规模优势压制其扩张。\n- 甜啦啦（30分）、奈雪的茶（28分）：威胁低，但需监测其战略调整。",
+      "recommendations": "1. 【产品】针对喜茶（63分）启动用户调研，强化健康化和品牌体验差异化（优先级90）。\n2. 【增长】在古茗（78分）强势的三四线城市试点快闪店，测试用户转化（优先级85）。\n3. 【战略】监测茉莉奶白（46分）海外扩张，评估其高毛利模式是否反向渗透（优先级78）。\n4. 【监测】补采阿嬷手作（43分）社区口碑，量化产品独特性替代威胁（优先级72）。\n5. 【监测】补采奈雪的茶（30分）和甜啦啦（50分）的缺失证据，确认其战略调整影响（优先级68和65）。",
+      "methodology": "本报告先确认霸王茶姬的新茶饮竞争范围，再按 O/B/C/L（官方、基准、社区、前瞻信号）检查证据可用性。能力持久性分析使用 VRIO（价值性、稀缺性、难模仿性、组织支撑）判断门店、供应链、品牌和产品能力能否形成持续壁垒；市场动态分析使用 SWOT（优势、劣势、机会、威胁）判断用户重叠、价格带、渠道下沉与海外扩张如何转化为替代压力。QA 按证据强度调和两种方法的分歧，而非机械平均评分；Quality Gate 检查矩阵完整性、证据覆盖与行动可执行性。当前主要限制是部分社区搜索受限，以及若干品牌缺少可引用的用户迁移和单店经营证据。"
+    },
+    "quality_metrics": {},
+    "rework_history": [],
+    "timestamp": "2026-07-17T09:50:39.953663+00:00"
+  }
+]

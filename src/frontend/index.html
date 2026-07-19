@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RivalTrack — 竞品情报分析</title>
+<script src="/vendor/cytoscape-3.30.4.min.js"></script>
+<script src="/vendor/chart-4.4.0.umd.min.js"></script>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Fallback banner -->
+<div class="fallback-badge" id="fallback-banner">&#9888; 离线模式 — 显示缓存数据。后端可能不可用。</div>
+
+<!-- ══ Top Navigation ══ -->
+<nav class="topnav">
+  <div class="topnav-brand"><span class="accent">Rival</span>Track</div>
+  <div class="topnav-links" id="topnav-links">
+    <button data-view="dashboard" class="active">仪表盘</button>
+    <button data-view="compare">竞品对比</button>
+    <button data-view="report">完整报告</button>
+    <button data-view="history">历史报告</button>
+    <button data-view="settings">设置</button>
+  </div>
+  <div class="topnav-status" id="status-bar">
+    <span class="track-tag" id="track-badge">AI代码助手</span>
+    <button class="btn-new-analysis" id="btn-new-analysis">+ 新建分析</button>
+    <button class="btn-pause" id="btn-pause" title="暂停分析" style="display:none">⏸ 暂停</button>
+    <span class="elapsed" id="elapsed">00:00</span>
+  </div>
+</nav>
+
+<div class="app-shell">
+  <aside class="control-sidebar">
+    <div class="sidebar-section">
+      <button class="sidebar-btn primary" id="sidebar-new-analysis">新建分析</button>
+      <div class="sidebar-hint">只需填写我方产品名称，其余信息可点选或交给 Agent 补全。</div>
+      <div class="sidebar-secondary-actions">
+        <button class="sidebar-btn secondary-action" id="sidebar-load-history">显示历史结果</button>
+        <button class="sidebar-btn secondary-action" id="sidebar-load-demo">加载参考样例</button>
+      </div>
+    </div>
+    <div class="sidebar-section" id="sidebar-nav">
+      <div class="sidebar-title">视图</div>
+      <button class="sidebar-btn active" data-view="dashboard">仪表盘 <span>›</span></button>
+      <button class="sidebar-btn" data-view="compare">竞品对比 <span>›</span></button>
+      <button class="sidebar-btn" data-view="report">完整报告 <span>›</span></button>
+      <button class="sidebar-btn" data-view="history">历史报告 <span>›</span></button>
+      <button class="sidebar-btn" data-view="settings">设置 <span>›</span></button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">数据</div>
+      <button class="sidebar-btn" id="sidebar-clear-cache">清除本地缓存</button>
+    </div>
+  </aside>
+  <main class="app-content">
+
+<!-- ══ Dashboard View (A3: vertical flow) ══ -->
+<div class="view active" id="view-dashboard">
+  <div class="dash-layout">
+
+    <!-- ① Executive Summary Banner -->
+    <div class="exec-banner" id="exec-banner">
+      <div class="exec-label">执行摘要</div>
+      <div class="exec-title" id="exec-title">等待 Pipeline 完成…</div>
+      <div class="exec-body" id="exec-body">Writer Agent 将在 Pipeline 完成后生成执行摘要。</div>
+      <div class="exec-meta" id="exec-meta"></div>
+    </div>
+
+    <!-- ② Section: Competitive Dimension Analysis -->
+    <div class="a3-section-header" style="padding-top:12px;">竞争维度分析</div>
+    <div class="charts-row" id="charts-row">
+      <div class="radar-panel">
+        <div class="chart-title">多维雷达图</div>
+        <div class="radar-container"><canvas id="radarChart"></canvas></div>
+        <div id="radarLegend" class="chart-legend-list" aria-label="多维雷达图图例"></div>
+      </div>
+      <div class="heatmap-panel">
+        <div class="chart-title">对我方威胁矩阵</div>
+        <div class="heatmap-table" id="heatmap-table">
+          <div class="exec-placeholder">等待分析 Agent 数据…</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ③ Scoring Methodology -->
+    <div class="scoring-methodology" id="scoring-methodology">
+      <div class="sm-header" id="sm-header">
+        评分说明 · Scoring Methodology
+        <span class="sm-arrow">▼</span>
+      </div>
+      <div class="sm-body" id="sm-body">
+        <div class="sm-intro">
+          评分基于 Agent 采集的证据数据进行多维度量化分析。每个维度综合考虑<strong>证据数量</strong>（关键词匹配频次）、<strong>证据质量</strong>（Agent 置信度加权）和<strong>基准校准</strong>（行业平均水平）。满分 100 分，采用百分位映射确保跨竞品可比性。
+        </div>
+        <div class="sm-dim-list" id="sm-dim-list"></div>
+      </div>
+    </div>
+
+    <!-- ④ Section: Evidence Timeline + Knowledge Graph (Two-Column) -->
+    <div class="a3-section-header">证据时间线 &amp; 竞争图谱</div>
+    
+        <div class="debate-callout" id="debate-callout">
+          <div class="dc-title">&#20998;&#27495;&#28857;: &#31454;&#20105;&#23041;&#32961;&#31561;&#32423;</div>
+          <div class="dc-body">
+            <div class="a"><div class="dc-agent-title">能力持久性分析（VRIO）</div><div class="debate-markdown" id="debate-a-text"><p>...</p></div></div>
+            <div class="b"><div class="dc-agent-title">市场动态与用户替代分析（SWOT）</div><div class="debate-markdown" id="debate-b-text"><p>...</p></div></div>
+          </div>
+          <div class="dc-verdict" id="debate-verdict"></div>
+        </div>
+    <div class="evidence-dag-row">
+      <div class="evidence-col">
+        <div class="ev-col-header">证据时间线</div>
+        <div class="evidence-strip" id="evidence-strip">
+          <div class="ev-placeholder">等待采集 Agent 证据…</div>
+        </div>
+      </div>
+      <div class="dag-col">
+        <div class="dag-section" id="dag-section">
+          <div class="dag-label">竞争知识图谱</div>
+          <div class="graph-toolbar" aria-label="图谱工具">
+            <button class="graph-tool-btn" id="graph-fit" title="适配图谱" aria-label="适配图谱">⛶</button>
+            <button class="graph-tool-btn" id="graph-zoom-in" title="放大图谱" aria-label="放大图谱">+</button>
+            <button class="graph-tool-btn" id="graph-zoom-out" title="缩小图谱" aria-label="缩小图谱">−</button>
+          </div>
+          <div class="graph-area" id="graph-area">
+            <div id="cy"></div>
+            <div class="pipeline-init visible" id="pipeline-init">等待新建分析，或从左侧加载历史/参考样例</div>
+          </div>
+          <div class="graph-legend" aria-label="知识图谱图例">
+            <div class="legend-item"><span class="legend-swatch track"></span><span>深色节点：赛道/市场边界</span></div>
+            <div class="legend-item"><span class="legend-swatch competitor"></span><span>白色节点：竞品产品/品牌</span></div>
+            <div class="legend-item"><span class="legend-swatch evidence"></span><span>蓝色节点：证据数量</span></div>
+            <div class="legend-item"><span class="legend-swatch risk"></span><span>橙色节点：威胁判断</span></div>
+            <div class="legend-item"><span class="legend-swatch debate"></span><span>红色节点：分歧复核</span></div>
+            <div class="legend-item"><span class="legend-line conflict"></span><span>红色虚线：A/B 论据冲突</span></div>
+            <div class="legend-item"><span class="legend-line high"></span><span>红线：高威胁</span></div>
+            <div class="legend-item"><span class="legend-line medium"></span><span>黄线：中威胁</span></div>
+            <div class="legend-item"><span class="legend-line low"></span><span>绿线：低威胁</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⑤ Section: Agent Timeline Cards -->
+    <div class="a3-section-header">&#24212;&#23545;&#34892;&#21160;&#28165;&#21333;</div>
+    <div class="response-actions" id="response-actions">
+      <div class="exec-placeholder">&#31561;&#24453; Writer Agent &#29983;&#25104;&#34892;&#21160;&#24314;&#35758;</div>
+    </div>
+
+    <div class="a3-section-header">Agent 活动日志</div>
+    <div class="side-panel">
+      <div class="timeline" id="timeline"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ Compare View ══ -->
+<div class="view" id="view-compare">
+  <div class="view-scroll">
+    <div class="view-header">竞品对比分析</div>
+    <div class="view-subhead">基于采集 Agent 数据源自动提取的竞争格局。指标来自分析 Agent 的交叉验证结论。</div>
+    <div class="agent-chips" id="compare-chips"></div>
+    <div class="compare-grid" id="compare-grid">
+      <div class="cc-empty">等待 Pipeline 数据&hellip;</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Full Report View ══ -->
+<div class="view" id="view-report">
+  <div class="view-scroll report-view-scroll">
+    <div class="report-toolbar">
+      <div>
+        <div class="view-header">完整竞品分析报告</div>
+        <div class="view-subhead">按 Writer 章节、QA 裁决和证据链生成，可导出为 Markdown 或打印为 PDF。</div>
+      </div>
+      <div class="report-toolbar-actions">
+        <button class="btn-secondary" id="btn-export-report" type="button">导出 Markdown</button>
+        <button class="btn-secondary" id="btn-export-threat-csv" type="button">导出威胁矩阵 CSV</button>
+        <button class="btn-secondary" id="btn-export-evidence-csv" type="button">导出证据表 CSV</button>
+        <button class="btn-secondary" id="btn-export-actions-csv" type="button">导出行动清单 CSV</button>
+        <button class="btn-secondary" id="btn-open-evidence-workspace" type="button">证据工作区</button>
+        <button class="btn-secondary" id="btn-print-report" type="button">打印 / PDF</button>
+      </div>
+    </div>
+    <div class="full-report-layout">
+      <aside class="report-toc" id="report-toc"></aside>
+      <article class="full-report" id="full-report-content">
+        <div class="empty-state"><h2>等待完整报告</h2><p>Pipeline 完成后，撰写 Agent 的章节化结论会显示在这里。</p></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- ══ History View ══ -->
+<div class="view" id="view-history">
+  <div class="view-scroll">
+    <div class="view-header">历史报告</div>
+    <div class="view-subhead">过往竞品分析记录。每次 Pipeline 运行完成后自动存档。</div>
+    <div class="history-list" id="history-list">
+      <div class="hi-empty">暂无历史报告。运行一次完整的 Pipeline 后将在此显示记录。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Settings View ══ -->
+<div class="view" id="view-settings">
+  <div class="view-scroll">
+    <div class="view-header">设置</div>
+    <div class="view-subhead">配置 API 连接、显示偏好和数据源。</div>
+    <div class="settings-panel">
+      <div class="settings-group">
+        <h3>API 连接</h3>
+        <div class="sg-desc">WebSocket 服务器地址。修改后刷新页面生效。</div>
+        <div class="setting-row">
+          <div><div class="sr-label">WebSocket 地址</div><div class="sr-desc">Pipeline 实时数据推送端点</div></div>
+          <input type="text" id="setting-ws-url" value="ws://localhost:8765" readonly>
+        </div>
+        <div class="setting-row">
+          <div><div class="sr-label">HTTP 端口</div><div class="sr-desc">静态文件和回退数据服务端口</div></div>
+          <input type="text" id="setting-http-port" value="8080" readonly>
+        </div>
+      </div>
+      <div class="settings-group">
+        <h3>显示偏好</h3>
+        <div class="sg-desc">调整仪表盘视图的默认行为。</div>
+        <div class="setting-row">
+          <div><div class="sr-label">自动展开 Agent 详情</div><div class="sr-desc">Pipeline 完成后自动展开所有 Agent 输出详情</div></div>
+          <select id="setting-auto-expand">
+            <option value="off">关闭</option>
+            <option value="on" selected>开启</option>
+          </select>
+        </div>
+        <div class="setting-row">
+          <div><div class="sr-label">图布局动画</div><div class="sr-desc">数据加载时的交错入场动画</div></div>
+          <select id="setting-stagger-anim">
+            <option value="on" selected>开启</option>
+            <option value="off">关闭</option>
+          </select>
+        </div>
+      </div>
+      <div class="settings-group">
+        <h3>数据</h3>
+        <div class="sg-desc">管理本地缓存和回退数据。</div>
+        <div class="setting-row">
+          <div><div class="sr-label">清除本地缓存</div><div class="sr-desc">删除 localStorage 中保存的 Agent 输出数据</div></div>
+          <button onclick="clearLocalCache()" style="font-family:var(--font-body);font-size:14px;padding:8px 20px;border:1px solid var(--accent-red);color:var(--accent-red);background:transparent;border-radius:var(--radius-sm);cursor:pointer;font-weight:500;">清除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+</div>
+
+<!-- ══ Sample Selector Modal ══ -->
+<div class="modal-overlay" id="sample-selector-overlay">
+  <div class="modal-box sample-selector-box">
+    <button class="close-btn" id="sample-selector-close">&times;</button>
+    <h3>选择参考样例</h3>
+    <p style="color:var(--text-secondary);margin-bottom:20px;">请选择要加载的竞品分析样例数据：</p>
+    <div class="sample-options">
+      <button class="sample-option-card" data-url="/data/demo-fallback.json">
+        <div class="sample-option-icon">&#x1F4BB;</div>
+        <div class="sample-option-info">
+          <div class="sample-option-title">AI代码助手赛道</div>
+          <div class="sample-option-desc">我方：GitHub Copilot · 7个竞品 · 2026年5月数据</div>
+        </div>
+      </button>
+      <button class="sample-option-card" data-url="/data/demo-fallback-milktea.json">
+        <div class="sample-option-icon">&#x1F375;</div>
+        <div class="sample-option-info">
+          <div class="sample-option-title">新茶饮赛道</div>
+          <div class="sample-option-desc">我方：霸王茶姬 · 8个竞品 · 2026年5月数据</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Evidence Modal ══ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-box">
+    <button class="close-btn" id="modal-close">&times;</button>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ══ New Analysis Modal ══ -->
+<div class="view" id="view-analysis">
+  <aside class="analysis-sidebar" aria-label="新建分析导航">
+    <button class="analysis-sidebar-back" type="button" data-view="dashboard">← 返回仪表盘</button>
+    <div class="analysis-sidebar-title">新建分析</div>
+    <a href="#analysis-product-step">1. 我方产品</a>
+    <a href="#scope-step-title">2. 赛道与竞品</a>
+    <a href="#analysis-profile-step">3. 分析重点</a>
+    <a href="#analysis-depth-step">4. 深度与证据</a>
+    <div class="analysis-sidebar-tip">赛道由系统自动识别，可在确认研究范围前直接修改。</div>
+  </aside>
+  <div class="view-scroll" id="analysis-form-scroll">
+  <div class="analysis-page-card" id="analysis-form">
+    <button class="close-btn" id="analysis-page-close" aria-label="返回仪表盘">&times;</button>
+    <h3>新建竞品分析</h3>
+    <div class="form-group" id="analysis-product-step">
+      <label for="ana-target-name">&#25105;&#26041;&#20135;&#21697;&#21517;&#31216; <span class="field-badge required">&#24517;&#22635;</span></label>
+      <input type="text" id="ana-target-name" placeholder="&#20363;&#22914;: &#25105;&#26041; AI &#20195;&#30721;&#21161;&#25163;">
+    </div>
+    <section class="analysis-discovery-step" aria-labelledby="scope-step-title">
+      <h4 id="scope-step-title">先确认赛道，再发现竞品</h4>
+      <p class="sidebar-hint">系统先根据产品名称识别赛道。确认或修改赛道后，才会按该赛道发现候选竞品。</p>
+      <div class="source-discovery-actions">
+        <button class="btn-secondary" id="btn-discover-track" type="button">1. 自动识别赛道</button>
+        <button class="btn-secondary" id="btn-confirm-track" type="button" hidden>2. 确认赛道并发现竞品</button>
+        <button class="btn-secondary" id="btn-add-scope-competitor" type="button" hidden>+ 添加竞品</button>
+        <button class="btn-secondary" id="btn-freeze-scope" type="button" hidden>确认勾选并冻结范围</button>
+      </div>
+      <div class="scope-manual-add" id="scope-manual-add" hidden>
+        <input type="text" id="scope-manual-name" placeholder="输入想分析的竞品名称">
+        <button class="btn-secondary" id="btn-save-scope-competitor" type="button">加入候选</button>
+        <button class="btn-secondary" id="btn-cancel-scope-competitor" type="button">取消</button>
+      </div>
+      <div class="analysis-scope-panel" id="analysis-scope-panel">
+        <div class="source-discovery-header">尚未识别赛道</div>
+        <div class="sidebar-hint">填写我方产品名称后，点击“自动识别赛道”。</div>
+      </div>
+    </section>
+    <fieldset class="choice-question" id="analysis-profile-step">
+      <legend>1. 我方产品主要靠什么定位竞争？ <span class="field-badge optional">单选</span></legend>
+      <div class="choice-grid">
+        <label class="choice-chip"><input type="radio" name="target-positioning" value="高端体验与差异化"><span>高端体验</span></label>
+        <label class="choice-chip"><input type="radio" name="target-positioning" value="性价比与大众市场"><span>性价比</span></label>
+        <label class="choice-chip"><input type="radio" name="target-positioning" value="专业能力与深度"><span>专业深度</span></label>
+        <label class="choice-chip"><input type="radio" name="target-positioning" value="平台生态与整合"><span>平台生态</span></label>
+        <label class="choice-chip"><input type="radio" name="target-positioning" value="定位尚待确认" data-default><span>尚不确定</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="choice-question">
+      <legend>2. 主要服务哪些用户？ <span class="field-badge optional">可多选</span></legend>
+      <div class="choice-grid">
+        <label class="choice-chip"><input type="checkbox" name="target-users" value="个人消费者"><span>个人消费者</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-users" value="专业用户与开发者"><span>专业用户</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-users" value="中小企业与团队"><span>中小团队</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-users" value="大型企业与机构"><span>大型企业</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-users" value="学生与教育用户"><span>学生教育</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-users" value="用户范围不限" data-default data-exclusive><span>暂不限定</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="choice-question">
+      <legend>3. 最想比较哪些能力？ <span class="field-badge optional">可多选</span></legend>
+      <div class="choice-grid">
+        <label class="choice-chip"><input type="checkbox" name="target-capabilities" value="产品功能与体验" data-default><span>功能体验</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-capabilities" value="价格与商业模式" data-default><span>价格模式</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-capabilities" value="技术与创新能力"><span>技术创新</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-capabilities" value="品牌与用户口碑"><span>品牌口碑</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-capabilities" value="渠道、增长与市场覆盖"><span>渠道增长</span></label>
+        <label class="choice-chip"><input type="checkbox" name="target-capabilities" value="生态、供应链与组织壁垒"><span>生态壁垒</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="choice-question">
+      <legend>4. 本次分析最需要回答什么？ <span class="field-badge optional">单选</span></legend>
+      <div class="choice-grid choice-grid-wide">
+        <label class="choice-chip"><input type="radio" name="target-concern" value="全面识别竞品对我方产品的威胁与机会" data-default><span>全面扫描威胁与机会</span></label>
+        <label class="choice-chip"><input type="radio" name="target-concern" value="判断竞品是否会分流我方核心用户"><span>用户替代风险</span></label>
+        <label class="choice-chip"><input type="radio" name="target-concern" value="寻找我方应优先补齐的能力差距"><span>能力追赶方向</span></label>
+        <label class="choice-chip"><input type="radio" name="target-concern" value="评估竞品渠道扩张与市场进入风险"><span>渠道与扩张风险</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="choice-question" id="analysis-depth-step">
+      <legend>分析深度 <span class="field-badge required">单选</span></legend>
+      <div class="choice-grid choice-grid-wide">
+        <label class="choice-chip"><input type="radio" name="analysis-mode" value="fast"><span>快速：最多 3 个竞品</span></label>
+        <label class="choice-chip"><input type="radio" name="analysis-mode" value="standard" checked data-default><span>标准：最多 5 个竞品、1 轮返工</span></label>
+        <label class="choice-chip"><input type="radio" name="analysis-mode" value="deep"><span>深度：最多 8 个竞品、2 轮返工</span></label>
+      </div>
+    </fieldset>
+    <div class="form-group">
+      <label for="ana-context">5. 还有必须说明的内容吗？ <span class="field-badge optional">选填</span></label>
+      <textarea id="ana-context" rows="2" placeholder="没有可留空；如有特殊地区、时间范围或限定条件，用一句话补充即可。"></textarea>
+    </div>
+    <div class="source-discovery-actions">
+      <button class="btn-secondary" id="btn-discover-sources" type="button">先预览可采集来源（推荐）</button>
+      <span class="sidebar-hint">请先自动发现并确认研究范围；候选竞品可取消，也可手动添加，最多分析 8 个。</span>
+    </div>
+    <div class="source-discovery" id="source-discovery-results"></div>
+    <div class="evidence-import-panel" id="evidence-import-panel">
+      <div class="evidence-import-header">
+        <div class="evidence-import-title">具体证据导入</div>
+        <button class="btn-secondary" id="btn-add-manual-evidence" type="button">添加证据</button>
+      </div>
+      <div class="evidence-import-hint">把已经打开过的具体网页、帖子、商品页或报告页粘贴到这里。Agent 会优先使用这些 URL 和摘录文本作为可引用事实。</div>
+      <div class="manual-evidence-list" id="manual-evidence-list"></div>
+    </div>
+    <button class="btn-submit" id="btn-submit-ana">开始分析</button>
+    <div class="form-status" id="ana-status"></div>
+  </div>
+</div>
+
+<!-- ══ Run Notification Modal ══ -->
+</div>
+<div class="modal-overlay" id="notice-modal-overlay">
+  <div class="modal-box notice-box">
+    <button class="close-btn" id="notice-modal-close">&times;</button>
+    <h3 id="notice-title"></h3>
+    <div id="notice-body"></div>
+    <button class="btn-submit" id="notice-ok">知道了</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="revision-modal-overlay">
+  <div class="modal-box">
+    <button class="close-btn" id="revision-modal-close">&times;</button>
+    <h3>报告高亮、批注与 AI 修改</h3>
+    <input type="hidden" id="revision-section-id">
+    <div class="form-group"><label for="revision-quote">选中文字</label><textarea id="revision-quote" rows="3"></textarea></div>
+    <div class="form-group"><label for="revision-intent">操作方式</label><select id="revision-intent">
+      <option value="comment_only" selected>仅添加批注</option><option value="highlight_only">仅高亮文本</option>
+      <option value="supplement_evidence">补充证据</option><option value="challenge">质疑结论</option>
+      <option value="rewrite">改写表达</option><option value="shorten">压缩内容</option><option value="compare">增加对比</option>
+    </select></div>
+    <div class="form-group" id="revision-comment-group"><label for="revision-comment" id="revision-comment-label">批注内容</label><textarea id="revision-comment" rows="3"></textarea></div>
+    <div class="revision-modal-actions">
+      <button class="btn-secondary" id="btn-cancel-revision" type="button">取消</button>
+      <button class="btn-new-analysis" id="btn-request-revision" type="button">保存批注</button>
+    </div>
+    <div id="revision-result"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="evidence-workspace-overlay">
+  <div class="modal-box">
+    <button class="close-btn" id="evidence-workspace-close">&times;</button>
+    <h3>跨报告证据工作区</h3>
+    <div id="human-quality-metrics"></div>
+    <div id="evidence-workspace-list"></div>
+  </div>
+</div>
+
+<script>
+window.RIVALTRACK_CONFIG = { wsPort: "__RIVALTRACK_WS_PORT__" };
+</script>
+<script src="/app.js"></script>
+</body>
+</html>

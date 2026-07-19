@@ -1,0 +1,44 @@
+# Evidence slot query templates for fintech / financial services.
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 产品介绍 OR 功能更新 OR 费率说明 OR 安全机制 OR 风控体系"
+    exclude_terms: ["下载", "app", "安装包"]
+    freshness: oneMonth
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 费率 OR 利率 OR 手续费 OR 年费 OR 定价方案 OR 会员等级"
+    exclude_terms: ["下载", "破解"]
+    freshness: oneMonth
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 用户评价 OR 投诉 OR 体验反馈 OR 资金安全 OR 客服争议"
+    exclude_terms: ["破解", "下载站", "绿色版"]
+    freshness: oneMonth
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} 排名 OR 市场份额 OR 行业报告 OR 评测对比 OR APY比较"
+    exclude_terms: []
+    freshness: oneYear
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 用户规模 OR 渠道合作 OR 场景覆盖 OR 生态入口 OR 开放平台"
+    exclude_terms: []
+    freshness: oneMonth
+  compliance_signal:
+    dimension: strategic_expansion
+    source_types: [official, leading]
+    template: "{name} 合规 OR 牌照 OR 监管动态 OR 备案 OR 审计报告 OR 资金存管"
+    exclude_terms: []
+    freshness: oneYear
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 融资 OR 上市 OR 并购 OR 新业务线 OR 海外牌照 OR 跨界合作"
+    exclude_terms: []
+    freshness: oneYear

@@ -1,0 +1,53 @@
+# Evidence slot query templates for search API calls.
+# Placeholders: {name} = competitor name, {track} = industry track,
+#   {repo_owner}/{repo_name} = GitHub repo identifiers (set via disambiguation).
+
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 功能介绍 OR 技术能力 OR 产品更新日志 OR 版本发布"
+    exclude_terms: ["download", "下载", "安装", "app下载"]
+    freshness: oneMonth
+
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 定价 OR 价格 OR 套餐对比 OR 免费版 OR 付费版"
+    exclude_terms: ["download", "下载"]
+    freshness: oneMonth
+
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 用户评价 OR 使用体验 OR 优缺点 OR 吐槽 OR 对比评测"
+    exclude_terms: ["破解", "绿色版", "下载站"]
+    freshness: oneMonth
+
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} benchmark OR comparison OR review OR 评测 OR 横向对比"
+    exclude_terms: []
+    freshness: oneYear
+
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 上线 OR 入驻 OR 合作 OR 接入 OR 集成 OR 插件市场 OR enterprise customer"
+    exclude_terms: []
+    freshness: oneYear
+
+  github_release_velocity:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "site:github.com {name} releases OR changelog OR issues"
+    exclude_terms: []
+    freshness: oneYear
+
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} hiring OR roadmap OR funding OR patent OR partnership OR 招聘 OR 融资"
+    exclude_terms: []
+    freshness: oneYear

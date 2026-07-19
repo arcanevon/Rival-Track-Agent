@@ -1,0 +1,59 @@
+# Evidence slot query templates for retail / FMCG / physical consumer goods.
+# Placeholders: {name} = competitor name, {track} = industry track.
+
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 产品介绍 OR 菜单 OR 新品上市 OR 门店信息 OR 品牌故事"
+    exclude_terms: ["软件", "app", "应用程序", "下载", "apk", "安装包"]
+    freshness: oneMonth
+
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 价格 OR 人均消费 OR 菜单价格 OR 产品定价"
+    exclude_terms: ["软件", "app", "下载"]
+    freshness: oneMonth
+
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 用户评价 OR 探店 OR 口碑 OR 投诉 OR 吐槽 OR 对比评测"
+    exclude_terms: ["破解", "绿色版", "下载站", "软件"]
+    freshness: oneMonth
+
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} 排名 OR 榜单 OR 对比 OR 评测 OR 行业报告"
+    exclude_terms: []
+    freshness: oneYear
+
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 门店数量 OR 加盟政策 OR 外卖平台 OR 渠道分布 OR 城市覆盖"
+    exclude_terms: []
+    freshness: oneMonth
+
+  marketing_campaign:
+    dimension: strategic_expansion
+    source_types: [official, community]
+    template: "{name} 联名 OR 营销活动 OR 新品发布会 OR 节日促销 OR 品牌合作"
+    exclude_terms: []
+    freshness: oneMonth
+
+  supply_chain_signal:
+    dimension: strategic_expansion
+    source_types: [official, leading]
+    template: "{name} 供应链 OR 工厂 OR 原料产地 OR 中央厨房 OR 冷链物流"
+    exclude_terms: []
+    freshness: oneYear
+
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 融资 OR 上市 OR 跨界 OR 海外市场 OR 子品牌 OR 新业态"
+    exclude_terms: []
+    freshness: oneYear

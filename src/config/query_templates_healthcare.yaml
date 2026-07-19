@@ -1,0 +1,44 @@
+# Evidence slot query templates for healthcare / biotech / medical devices.
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 产品介绍 OR 适应症 OR 技术原理 OR 临床数据 OR 注册信息"
+    exclude_terms: ["下载", "app", "软件", "安装"]
+    freshness: oneMonth
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 定价 OR 价格 OR 医保报销 OR 收费模式 OR 收费目录"
+    exclude_terms: ["下载", "破解"]
+    freshness: oneMonth
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 患者评价 OR 医生反馈 OR 不良事件 OR 使用体验 OR 投诉"
+    exclude_terms: ["破解", "下载站"]
+    freshness: oneMonth
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} 临床对比 OR 疗效比较 OR 行业报告 OR 专家共识 OR 指南推荐"
+    exclude_terms: []
+    freshness: oneYear
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 渠道覆盖 OR 医院准入 OR 经销商 OR 医保纳入 OR 海外注册"
+    exclude_terms: []
+    freshness: oneMonth
+  regulatory_signal:
+    dimension: strategic_expansion
+    source_types: [official, leading]
+    template: "{name} 临床试验 OR 审批进度 OR FDA OR NMPA OR CE认证 OR 注册申报"
+    exclude_terms: []
+    freshness: oneYear
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 融资 OR IPO OR 专利布局 OR 管线扩展 OR 授权合作 OR 收购"
+    exclude_terms: []
+    freshness: oneYear

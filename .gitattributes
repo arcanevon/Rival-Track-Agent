@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Keep internal planning history out of source archives used for public releases.
+/CLAUDE.md export-ignore
+/docs/*-design-*.md export-ignore
+/docs/project-progress-*.md export-ignore
+/docs/*-grill-me-decisions.md export-ignore

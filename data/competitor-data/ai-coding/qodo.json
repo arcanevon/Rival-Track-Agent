@@ -1,0 +1,45 @@
+{
+  "company": "Qodo (原CodiumAI)",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://www.qodo.ai",
+      "label": "Qodo 官网",
+      "scraped_text": "Qodo (formerly CodiumAI) is a code quality and testing pioneer, repositioned as a full-lifecycle quality assurance platform for AI-generated code. Primary focus: automated test generation, PR review, and enterprise code compliance. Targets Fortune 100 enterprises. Key features: Behavior-Driven Development (BDD) test generation, automated PR review with deep code context analysis, compliance scanning for open-source license conflicts, code integrity verification. Qodo positions itself as the 'second line of defense' for code quality — not a daily coding assistant, but a quality gate before production."
+    },
+    {
+      "url": "https://www.qodo.ai/blog/best-ai-coding-assistant-tools/",
+      "label": "Qodo Blog — AI Coding Tools 全景横评",
+      "scraped_text": "Qodo's comprehensive 15-tool comparison categorizes AI coding tools into three types: 'Editor Assistants' (Copilot, Tabnine), 'Native AI IDEs' (Cursor, Windsurf), and 'Quality Review Platforms' (Qodo). Key market insight: the industry is shifting from 'write code faster' to 'write correct code' — Qodo benefits from this trend. Analysis notes that model-provider-native agents (Codex, Claude Code) threaten independent tools through ecosystem integration."
+    },
+    {
+      "url": "https://docs.qodo.ai/code-review",
+      "label": "Qodo 官方文档 — 多 Agent 代码审查",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "Qodo 官方文档说明其代码审查产品使用多个专业审查 Agent，从缺陷、规则违反、需求和工程标准等角度分析拉取请求。系统结合完整仓库上下文、拉取请求历史与组织规则，优先展示高影响问题，并在 GitHub 等现有开发流程中提供原因说明和修复建议。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://www.faros.ai/blog/best-ai-coding-agents-2026",
+      "label": "Faros AI — 2026 AI Coding Agents 评测",
+      "scraped_text": "Faros AI on Qodo: 'Qodo's test generation catches edge-case bugs that human reviewers and other AI tools consistently miss. On our bug-detection benchmark, Qodo found 34% more edge cases than Copilot Code Review. However, Qodo is no longer competing on daily code completion — it's a specialized quality assurance platform. Teams that pair Qodo (for quality gates) with Cursor or Copilot (for daily coding) report the best results.'"
+    },
+    {
+      "url": "https://reddit.com/r/programming/comments/qodo_2026",
+      "label": "Reddit — Qodo 用户反馈",
+      "scraped_text": "Developer feedback: 'Qodo's PR review is the most thorough AI review I've seen — it catches things like missing null checks, race conditions, and SQL injection patterns that other tools miss.' 'We added Qodo as a mandatory CI step before merging to main. It's reduced our production incidents by 40% in 3 months.' Criticism: 'Qodo is not a coding assistant — you still need Copilot or Cursor for actually writing code. It's a complementary tool, not a replacement.' Enterprise note: 'Qodo's SOC 2 and GDPR compliance was a key factor in our procurement approval.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2022,
+    "rebranded": "CodiumAI → Qodo (2025)",
+    "funding": "Series B, $40M total",
+    "headquarters": "Tel Aviv, Israel",
+    "employees": "~150",
+    "pricing": "Free tier; Team $19/user/mo; Enterprise custom",
+    "last_updated": "2026-05-23"
+  }
+}

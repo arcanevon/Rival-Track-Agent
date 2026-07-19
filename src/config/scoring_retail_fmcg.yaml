@@ -1,0 +1,73 @@
+# Search result scoring weights and domain/path rules for retail / FMCG.
+# Tuned for physical consumer goods: menus, stores, franchise info, reviews.
+
+scoring:
+  name_token_match: 30
+  keyword_match: 20
+  review_keyword_match: 8
+  official_domain_bonus: 40
+  content_path_bonus: 30
+  review_path_bonus: 15
+  download_path_penalty: -50
+  aggregator_domain_penalty: -30
+  baike_penalty: -25
+  low_quality_domain_penalty: -120
+  low_quality_marker_penalty: -120
+  download_title_penalty: -100
+  csdn_non_official_penalty: -35
+
+path_rules:
+  content_paths:
+    - menu
+    - products
+    - stores
+    - about
+    - news
+    - 品牌
+    - 产品
+    - 门店
+    - 加盟
+    - 新品
+    - 公告
+  review_paths:
+    - review
+    - compare
+    - 评测
+    - 测评
+    - 对比
+    - 探店
+    - 打卡
+    - 排行榜
+    - 榜单
+  download_paths:
+    - download
+    - install
+    - setup
+    - 下载
+    - 安装
+
+domain_rules:
+  aggregator_domains:
+    - sohu.com
+    - 163.com
+    - qq.com
+    - sina.com.cn
+  low_quality_domains:
+    - xlhs.com
+    - pc6.com
+    - downza.cn
+    - onlinedown.net
+    - mydown.com
+    - dongpo.net
+    - cr173.com
+    - crsky.com
+    - 52pojie.cn
+    - anfensi.com
+    - greendown.cn
+    - xitongzhijia.net
+    - duote.com
+    - newasp.net
+  content_farm_domains:
+    - zhihu.com
+    - csdn.net
+    - jianshu.com

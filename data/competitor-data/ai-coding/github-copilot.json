@@ -1,0 +1,43 @@
+{
+  "company": "GitHub Copilot",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://github.com/features/copilot",
+      "label": "GitHub Copilot 官网",
+      "scraped_text": "GitHub Copilot is the world's most widely adopted AI developer tool. Powered by OpenAI GPT-5 and GPT-5.1 Codex models. Features: inline code completions, Copilot Chat, Copilot Workspace (full-featured development environment), Copilot Code Review, Copilot for Pull Requests, Copilot Extensions ecosystem. 50M+ developers on platform, 100K+ enterprise customers. Integrates with VS Code, JetBrains, Visual Studio, Neovim, and GitHub.com."
+    },
+    {
+      "url": "https://github.blog/2026-04-copilot-workspace-ga",
+      "label": "GitHub Blog — Copilot Workspace GA 公告",
+      "scraped_text": "Copilot Workspace graduated to general availability April 2026. It's a full agentic development environment: describe a feature in natural language, Copilot designs the implementation plan, writes code across multiple files, runs tests, and opens a PR — all autonomously. Early data: 40% of Workspace-initiated PRs are merged without human code changes. Workspace is deeply integrated with GitHub Issues, Actions, and Codespaces, creating a complete AI-native development lifecycle within the GitHub ecosystem."
+    },
+    {
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/use-copilot-agents/overview",
+      "label": "GitHub 官方文档 — Copilot 编码 Agent",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "GitHub 官方文档说明 Copilot 云端编码 Agent 的核心功能是接收仓库 Issue 或自然语言任务，在隔离环境中研究代码库、制定计划、修改文件并创建拉取请求。开发者能够查看 Agent 的执行记录、追加指令，并在完成后请求 Copilot 代码审查，再决定修改、批准或合并结果。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://news.ycombinator.com/item?id=copilot_workspace_ga",
+      "label": "Hacker News — Copilot Workspace 讨论",
+      "scraped_text": "Mixed reception. Positive: 'The GitHub ecosystem lock-in is their real moat. If your issues, CI, and code are all on GitHub, Workspace is a no-brainer.' '40% auto-merge rate is insane — that's replacing junior dev work entirely.' Negative: 'Microsoft continues to monopolize the developer toolchain.' 'Copilot Code Review is unreliable on complex architectural changes — it rubber-stamps patterns it recognizes.' Data privacy concern: 'Microsoft is training on every line of code Copilot sees.'"
+    },
+    {
+      "url": "https://reddit.com/r/programming/comments/copilot_workspace_review",
+      "label": "Reddit — Copilot Workspace 实测",
+      "scraped_text": "Developer feedback: 'Workspace is scary good at CRUD features. It's mediocre at anything involving novel algorithms.' 'The code quality is consistent but uninspired — everything looks like it was written by the same mid-level engineer.' 'For enterprise teams, the GitHub Admin integration means managers can track AI-generated vs human-written code ratio per developer.' Pricing complaints: '$39/user/month for Business, $59/user/month for Enterprise — steep for large teams.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2021,
+    "funding": "Part of Microsoft ($3T market cap)",
+    "headquarters": "San Francisco, CA / Redmond, WA",
+    "employees": "Product team ~500 (Microsoft-wide: 220K+)",
+    "last_updated": "2026-05-22"
+  }
+}

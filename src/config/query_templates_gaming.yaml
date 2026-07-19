@@ -1,0 +1,44 @@
+# Evidence slot query templates for gaming / interactive entertainment.
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 版本更新 OR 新内容 OR 活动公告 OR 官方公告 OR 赛季更新"
+    exclude_terms: ["下载", "破解", "外挂", "私服"]
+    freshness: oneMonth
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 充值 OR 礼包 OR 月卡 OR 战令 OR 付费模式 OR 内购"
+    exclude_terms: ["下载", "破解", "刷"]
+    freshness: oneMonth
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 玩家评价 OR 社区反馈 OR 吐槽 OR 评分 OR TapTap OR NGA"
+    exclude_terms: ["破解", "外挂", "私服", "辅助"]
+    freshness: oneMonth
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} 排行榜 OR 流水 OR 收入榜单 OR 下载量 OR 热度排名"
+    exclude_terms: []
+    freshness: oneMonth
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 渠道 OR 联运 OR 买量 OR 发行 OR 平台独占 OR 海外发行"
+    exclude_terms: []
+    freshness: oneMonth
+  esports_signal:
+    dimension: strategic_expansion
+    source_types: [official, community]
+    template: "{name} 电竞 OR 赛事 OR 职业联赛 OR 战队 OR 直播合作"
+    exclude_terms: []
+    freshness: oneYear
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 版号 OR 融资 OR IP授权 OR 跨界联动 OR 海外上线 OR 研发团队"
+    exclude_terms: []
+    freshness: oneYear

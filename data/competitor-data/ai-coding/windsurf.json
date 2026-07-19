@@ -1,0 +1,48 @@
+{
+  "company": "Windsurf (Codeium)",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://codeium.com/windsurf",
+      "label": "Windsurf 官网",
+      "scraped_text": "Windsurf is a full-featured AI-native IDE by Codeium, powered by Cognition technology. It directly competes with Cursor in the AI IDE market. Key features: Flows (full-autonomous code orchestration — the agent writes code, runs tests, reads errors in real-time, and self-corrects in a continuous loop), multi-file editing, natural language to code generation, deep codebase understanding. Windsurf positions itself as having 'the most coherent autonomous coding flow' — where the agent doesn't just generate code but runs it, observes the output, and iterates until tests pass."
+    },
+    {
+      "url": "https://codeium.com/blog/windsurf-cognition-partnership",
+      "label": "Codeium Blog — Windsurf + Cognition 合作",
+      "scraped_text": "Codeium's partnership with Cognition (creator of Devin) brings advanced autonomous reasoning to Windsurf. The integration enables Windsurf to handle multi-hour complex engineering tasks: planning architecture, implementing across dozens of files, running test suites, debugging failures, and opening PRs — all in a continuous loop. Q1 2026: Windsurf reported 3M+ monthly active developers, growing from 1M in Q3 2025."
+    },
+    {
+      "url": "https://docs.windsurf.com/windsurf/cascade/cascade",
+      "label": "Windsurf 官方文档 — Cascade",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "Windsurf 官方文档介绍 Cascade 是具备 Code 与 Chat 模式的智能编码 Agent，其核心功能包括调用搜索、编辑、终端、Web、MCP 等工具，并提供检查点、代码回退、实时上下文和 Linter 集成。Cascade 还能用待办清单规划长任务，由专门规划 Agent 持续维护长期计划。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://www.faros.ai/blog/best-ai-coding-agents-2026",
+      "label": "Faros AI — 2026 AI Coding Agents 评测",
+      "scraped_text": "Faros AI on Windsurf: 'Windsurf's Flows are the most autonomous coding experience we've tested. The agent genuinely runs code, observes failures, and iterates — not just re-generates. On our multi-file benchmark, Windsurf scored 78% task completion, second only to Cursor (82%). Where Windsurf shines: the self-correcting loop catches runtime errors that static-only agents miss. Weakness: smaller plugin ecosystem compared to VS Code-based tools, and Cognition's technology is also being licensed to competitors.'"
+    },
+    {
+      "url": "https://www.qodo.ai/blog/best-ai-coding-assistant-tools/",
+      "label": "Qodo Blog — 15-tool 横评",
+      "scraped_text": "Qodo's analysis: 'Windsurf is the dark horse in the AI IDE race. Its Flow-based autonomous coding pipeline is architecturally superior to most competitors because it incorporates runtime verification. However, Windsurf faces ecosystem lock-in risk — as OpenAI (Codex) and Anthropic (Claude Code) launch their own agent platforms, independent IDEs may struggle to compete with the model providers' native tools.' Market positioning: Windsurf is 'best for developers who want maximum autonomy with minimal prompting.'"
+    },
+    {
+      "url": "https://reddit.com/r/programming/comments/windsurf_vs_cursor_2026",
+      "label": "Reddit — Windsurf vs Cursor 对比",
+      "scraped_text": "Developer comparison (2026): 'Windsurf's Flows are more autonomous than Cursor's Agent Mode — Windsurf actually runs the test suite and fixes failures, while Cursor sometimes just regenerates code without verifying.' 'Cursor has better UI/UX and more plugins, but Windsurf's runtime-aware agent is smarter about debugging.' 'I use both: Cursor for daily coding, Windsurf when I need to spawn an agent to fix a bug while I work on something else.' Pricing complaints: 'Windsurf's Flow minutes are expensive — a complex task can burn $5-10 in credits.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2021,
+    "parent": "Codeium",
+    "headquarters": "Mountain View, CA",
+    "pricing": "Free tier with limited Flows; Pro $15/mo; Team $30/user/mo",
+    "last_updated": "2026-05-23"
+  }
+}

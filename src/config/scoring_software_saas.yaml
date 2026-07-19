@@ -1,0 +1,68 @@
+# Search result scoring weights and domain/path rules.
+# Tune these to shift the balance between official sources, reviews,
+# and content farms.
+
+scoring:
+  name_token_match: 30
+  keyword_match: 20
+  review_keyword_match: 8
+  official_domain_bonus: 40       # was 80; lowered so download pages don't dominate
+  content_path_bonus: 30          # features/pricing/changelog/blog/docs paths
+  review_path_bonus: 15           # review/vs/compare/benchmark paths
+  download_path_penalty: -50      # download/install/setup paths
+  aggregator_domain_penalty: -30  # generic news portals
+  baike_penalty: -25
+  low_quality_domain_penalty: -120
+  low_quality_marker_penalty: -120
+  download_title_penalty: -100
+  csdn_non_official_penalty: -35
+
+path_rules:
+  content_paths:
+    - features
+    - pricing
+    - changelog
+    - blog
+    - docs
+    - guide
+    - updates
+    - release-notes
+  review_paths:
+    - review
+    - compare
+    - benchmark
+    - 评测
+    - 测评
+    - 对比
+  download_paths:
+    - download
+    - install
+    - setup
+    - 下载
+    - 安装
+
+domain_rules:
+  aggregator_domains:
+    - sohu.com
+    - 163.com
+    - qq.com      # generic qq.com; subdomains like pvp.qq.com handled by OFFICIAL_DOMAIN_HINTS
+    - sina.com.cn
+  low_quality_domains:
+    - xlhs.com
+    - pc6.com
+    - downza.cn
+    - onlinedown.net
+    - mydown.com
+    - dongpo.net
+    - cr173.com
+    - crsky.com
+    - 52pojie.cn
+    - anfensi.com
+    - greendown.cn
+    - xitongzhijia.net
+    - duote.com
+    - newasp.net
+  content_farm_domains:
+    - zhihu.com
+    - csdn.net
+    - jianshu.com

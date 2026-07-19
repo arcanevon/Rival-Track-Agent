@@ -1,0 +1,69 @@
+# Environment variables and local secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Node / frontend
+node_modules/
+/dist/
+/build/
+.npm/
+.eslintcache
+
+# Test and coverage output
+.coverage
+.pytest_cache/
+coverage.xml
+htmlcov/
+
+# Logs and generated runtime traces
+logs/
+*.log
+*.jsonl
+
+# Benchmark output
+data/benchmark/
+
+# Python type stubs (generated)
+*.pyi
+.mypy_cache/
+.ruff_cache/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

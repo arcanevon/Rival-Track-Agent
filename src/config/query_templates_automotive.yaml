@@ -1,0 +1,44 @@
+# Evidence slot query templates for automotive / EV / mobility.
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 车型 OR 续航 OR 动力参数 OR 智驾方案 OR OTA更新"
+    exclude_terms: ["下载", "软件", "app", "apk"]
+    freshness: oneMonth
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 售价 OR 价格 OR 配置表 OR 购车方案 OR 金融政策"
+    exclude_terms: ["下载", "软件"]
+    freshness: oneMonth
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 用户评价 OR 车主口碑 OR 投诉 OR 质量问题 OR 对比评测"
+    exclude_terms: ["破解", "破解版", "下载站", "软件"]
+    freshness: oneMonth
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} 续航测试 OR 智驾评测 OR 碰撞测试 OR 销量榜单 OR 行业报告"
+    exclude_terms: []
+    freshness: oneYear
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 交付量 OR 门店数量 OR 充电网络 OR 销售渠道 OR 海外市场"
+    exclude_terms: []
+    freshness: oneMonth
+  supply_chain_signal:
+    dimension: strategic_expansion
+    source_types: [official, leading]
+    template: "{name} 电池供应商 OR 芯片合作 OR 代工厂 OR 供应链 OR 产能规划"
+    exclude_terms: []
+    freshness: oneYear
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 融资 OR 上市 OR 新车型规划 OR 海外建厂 OR 自动驾驶牌照 OR 专利"
+    exclude_terms: []
+    freshness: oneYear

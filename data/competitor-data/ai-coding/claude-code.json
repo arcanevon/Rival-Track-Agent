@@ -1,0 +1,48 @@
+{
+  "company": "Claude Code (Anthropic)",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://claude.ai/code",
+      "label": "Claude Code 官网",
+      "scraped_text": "Claude Code is Anthropic's agentic coding tool. It operates directly in your terminal, understanding your entire codebase. Unlike IDE plugins, Claude Code can run commands, manage files, execute tests, and fix bugs autonomously. Features: context-aware code generation, multi-file editing, terminal-native workflow, git integration, custom hooks and skills. Built on Claude Opus 4 — Anthropic's most capable model optimized for complex software engineering tasks. Trusted by engineering teams at top startups and enterprises."
+    },
+    {
+      "url": "https://anthropic.com/blog/claude-code-best-practices",
+      "label": "Anthropic — Claude Code 最佳实践",
+      "scraped_text": "Claude Code is designed for autonomous software engineering. Developers report 2-4x productivity gains on real-world tasks. Key differentiators: (1) Terminal-native — no IDE lock-in, works with any editor; (2) Agentic by default — can open PRs, run tests, fix lints without being told; (3) Claude Opus 4 powering deep reasoning across million-token contexts. Q1 2026 usage: 50K+ daily active developers, growing 15% week-over-week."
+    },
+    {
+      "url": "https://code.claude.com/docs/en/how-claude-code-works",
+      "label": "Claude Code 官方文档 — Agent 工作机制",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "Claude Code 官方文档将产品定义为运行在终端中的智能编码 Agent。其工作循环包括收集项目上下文、采取行动和验证结果，并可通过工具搜索文件、编辑代码、执行命令及运行测试。文档还说明 Claude Code 支持终端、IDE、桌面端和云端环境，可借助 MCP、Hooks、Skills 与子 Agent 扩展复杂研发流程。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://news.ycombinator.com/item?id=claude_code_launch",
+      "label": "Hacker News — Claude Code 发布讨论",
+      "scraped_text": "Strong positive sentiment: 'Finally an AI coding tool that doesn't feel like autocomplete on steroids.' 'The terminal-first approach is genius — no more context switching between IDE and terminal.' Some concerns: 'Anthropic API pricing adds up fast on large codebases.' 'The agentic nature means it can mess up your code if you're not watching — needs guardrails.' Comparison to Copilot: 'Claude Code handles complex refactoring across 10+ files that Copilot chokes on.'"
+    },
+    {
+      "url": "https://reddit.com/r/programming/comments/claude_code_vs_copilot",
+      "label": "Reddit — Claude Code vs Copilot",
+      "scraped_text": "Developers comparing: Claude Code wins on complex multi-file tasks and autonomous debugging. Copilot wins on inline completions and IDE integration. Common take: 'Claude Code replaces the senior dev reviewing your PR. Copilot replaces the autocomplete.' Enterprise concern: code privacy — Anthropic's data policy for Claude Code is more restrictive than GitHub's for Copilot."
+    },
+    {
+      "url": "https://producthunt.com/products/claude-code/reviews",
+      "label": "ProductHunt 用户评价",
+      "scraped_text": "4.8/5 stars. Top review: 'I shipped a feature in 2 hours that I estimated at 2 days. Claude Code wrote 800 lines across 12 files, all tests passing.' Criticism: 'Expensive for individual devs. $200/month API bills are not uncommon.' Feature request: 'Need better integration with Jira/Linear for ticket-driven workflows.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2022,
+    "funding": "$8B+ total raised, latest valuation $60B (Jan 2026)",
+    "headquarters": "San Francisco, CA",
+    "employees": "~1,500",
+    "last_updated": "2026-05-22"
+  }
+}

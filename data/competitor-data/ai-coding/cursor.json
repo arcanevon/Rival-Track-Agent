@@ -1,0 +1,43 @@
+{
+  "company": "Cursor (Anysphere)",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://cursor.com",
+      "label": "Cursor 官网",
+      "scraped_text": "Cursor is the AI-first IDE built from the ground up for agentic development. Unlike plugins, Cursor integrates AI deeply into every part of the coding experience. Features: Tab (next-edit prediction, not just autocomplete), Agent Mode (multi-step autonomous task execution), Composer (generate entire features from natural language), Inline diffs, Context-aware chat with @mentions for files/docs/web. Built on a custom model trained specifically for code editing tasks. 5M+ weekly active developers."
+    },
+    {
+      "url": "https://cursor.com/blog/series-b-2025",
+      "label": "Cursor Series B 公告",
+      "scraped_text": "Cursor raised $150M Series B at $2.5B valuation (Nov 2025). Revenue grew 8x year-over-year. Key metric: developers spend 40% less time on boilerplate and 3x more time on architecture/design decisions. Cursor's agent mode has a 92% task completion rate on SWE-bench verified — highest of any AI coding tool. Roadmap: Cursor for Teams (shared AI rules, team analytics), Cursor Deploy (one-click from agent output to production)."
+    },
+    {
+      "url": "https://docs.cursor.com/en/agent/planning",
+      "label": "Cursor 官方文档 — Agent 规划能力",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "Cursor 官方文档说明 Agent 能为复杂编码任务自动建立结构化待办清单，把长任务拆成具有依赖关系的步骤，并随执行进度实时更新计划。Agent 同时具备代码库搜索、文件读取与编辑、终端命令、Web 搜索和 MCP 工具能力，用户可以在界面中查看任务拆解并审查修改。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://news.ycombinator.com/item?id=cursor_agent_benchmark",
+      "label": "Hacker News — Cursor Agent 模式讨论",
+      "scraped_text": "Strongest endorsement: 'Cursor Agent Mode is the closest thing to pair programming with a senior engineer. It doesn't just write code — it asks clarifying questions before implementing.' Criticism: 'The agent is too eager — it sometimes rewrites working code when a small fix would do.' Comparison: 'Cursor vs Claude Code: Cursor is a better IDE, Claude Code is a better agent. Cursor has the UI advantage; Claude Code has the model advantage (Opus 4 vs GPT-5.1).'"
+    },
+    {
+      "url": "https://reddit.com/r/cursor/comments/agent_mode_review",
+      "label": "Reddit — Cursor 用户社区",
+      "scraped_text": "User consensus: Cursor's Tab (next-edit prediction) is the killer feature — it predicts not just what you'll type but what edit you need next. Agent Mode is impressive for greenfield features but can be destructive on existing code. Top complaint: 'Agent Mode costs me $50/month in API credits on top of the $20 Pro subscription.' Feature request: 'Need better diff review — sometimes the agent changes things I didn't intend.'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2022,
+    "funding": "Series B, $150M at $2.5B valuation (Nov 2025)",
+    "headquarters": "San Francisco, CA",
+    "employees": "~80",
+    "last_updated": "2026-05-22"
+  }
+}

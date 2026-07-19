@@ -1,0 +1,10 @@
+[
+  {"id":"software-saas-cursor","industry":"software_saas","track":"AI 编程工具与软件服务","threat_target":"GitHub Copilot","competitor":"Cursor"},
+  {"id":"retail-fmcg-heytea","industry":"retail_fmcg","track":"新茶饮与连锁零售","threat_target":"霸王茶姬","competitor":"喜茶"},
+  {"id":"automotive-nio","industry":"automotive","track":"新能源汽车与智能驾驶","threat_target":"小鹏汽车","competitor":"蔚来汽车"},
+  {"id":"consumer-hardware-dji","industry":"consumer_hardware","track":"消费电子与智能硬件","threat_target":"影石创新","competitor":"大疆创新"},
+  {"id":"gaming-genshin","industry":"gaming","track":"游戏与互动娱乐","threat_target":"洛克王国手游","competitor":"原神"},
+  {"id":"platform-social-xiaohongshu","industry":"platform_social","track":"内容社区与社交平台","threat_target":"知乎","competitor":"小红书"},
+  {"id":"fintech-alipay","industry":"fintech","track":"金融科技与移动支付","threat_target":"云闪付","competitor":"支付宝"},
+  {"id":"healthcare-we-doctor","industry":"healthcare","track":"医疗健康与数字医疗","threat_target":"平安好医生","competitor":"微医"}
+]

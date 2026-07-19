@@ -1,0 +1,44 @@
+# Evidence slot query templates for content / social / platform businesses.
+slots:
+  official_capability:
+    dimension: capability_catch_up
+    source_types: [official]
+    template: "{name} 功能更新 OR 产品介绍 OR 平台规则 OR 创作者工具 OR 商业化产品"
+    exclude_terms: ["下载", "app", "安装包"]
+    freshness: oneMonth
+  pricing_or_packaging:
+    dimension: user_substitution
+    source_types: [official]
+    template: "{name} 抽成比例 OR 分成政策 OR 广告定价 OR 会员体系 OR 商业化模式"
+    exclude_terms: ["下载", "app"]
+    freshness: oneMonth
+  community_pain:
+    dimension: user_substitution
+    source_types: [community]
+    template: "{name} 用户评价 OR 创作者反馈 OR 吐槽 OR 审核争议 OR 平台体验"
+    exclude_terms: ["破解", "下载站"]
+    freshness: oneMonth
+  third_party_benchmark:
+    dimension: capability_catch_up
+    source_types: [benchmark]
+    template: "{name} {track} MAU OR DAU OR 用户时长 OR 市场份额 OR 行业报告"
+    exclude_terms: []
+    freshness: oneYear
+  distribution_signal:
+    dimension: distribution
+    source_types: [official, benchmark]
+    template: "{name} 用户增长 OR 渠道投放 OR 流量来源 OR 国际化 OR 海外用户"
+    exclude_terms: []
+    freshness: oneMonth
+  creator_ecosystem:
+    dimension: strategic_expansion
+    source_types: [official, community]
+    template: "{name} 创作者生态 OR 内容激励 OR 签约政策 OR MCN OR 达人运营"
+    exclude_terms: []
+    freshness: oneYear
+  strategic_expansion_signal:
+    dimension: strategic_expansion
+    source_types: [leading]
+    template: "{name} 融资 OR 上市 OR 新业务 OR 跨界电商 OR AI策略 OR 收购"
+    exclude_terms: []
+    freshness: oneYear

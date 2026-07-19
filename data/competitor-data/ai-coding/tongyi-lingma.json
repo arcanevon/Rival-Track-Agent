@@ -1,0 +1,43 @@
+{
+  "company": "通义灵码 (Alibaba Cloud)",
+  "track": "AI代码助手",
+  "official_sources": [
+    {
+      "url": "https://tongyi.aliyun.com/lingma",
+      "label": "通义灵码 官网",
+      "scraped_text": "通义灵码是阿里云推出的智能编码助手，基于通义千问大模型。功能覆盖：代码补全、代码解释、代码优化、Bug 修复、单元测试生成、代码审查、整个仓库级代码问答。深度集成阿里云开发者生态——云效 DevOps 平台、DataWorks 数据开发、PAI 机器学习平台。支持 VS Code、JetBrains、自研 IDE。日均调用量超 30 亿次，服务超过 200 万中国开发者。企业版支持私有化部署和代码库微调。"
+    },
+    {
+      "url": "https://developer.aliyun.com/article/lingma-2026",
+      "label": "阿里云开发者 — 通义灵码 2026 更新",
+      "scraped_text": "2026 Q1 更新：上线「灵码 Agent」模式——支持自然语言描述需求，自动完成需求分析→技术方案→多文件编码→测试验证→代码评审全流程。与钉钉深度集成——在钉钉群聊中 @灵码 即可触发代码审查或问题排查。新增「企业代码资产」功能——自动学习企业内部代码库和规范文档，生成符合企业标准的代码。阿里云内部：80% 的日常代码由灵码辅助生成。"
+    },
+    {
+      "url": "https://help.aliyun.com/zh/lingma/user-guide/overview-of-chat",
+      "label": "阿里云官方文档 — 通义灵码智能会话",
+      "evidence_slot": "official_capability",
+      "authority": "high",
+      "scraped_text": "阿里云官方文档说明通义灵码智能会话支持智能问答、文件编辑和智能体三种模式，可处理代码修复、调试与运行错误排查。智能体具备多文件修改、自主决策、环境感知和工具使用能力，并能通过记忆感知逐步积累开发者、工程和问题上下文，端到端完成编码任务。用户可根据场景和问题难度切换模式，以适配从即时问答到复杂工程修改的不同任务。"
+    }
+  ],
+  "community_sources": [
+    {
+      "url": "https://juejin.cn/post/tongyi_lingma_review",
+      "label": "掘金 用户评测",
+      "scraped_text": "中国开发者主流评测：中文理解能力远超 Copilot——用中文描述需求生成的代码质量明显更好。对国内技术栈（Spring Boot、Vue、小程序）的支持优于国际工具。钉钉+云效的深度集成在国内企业场景中具有很强的替代成本优势。缺点：英文代码注释和文档理解不如 Copilot；开源社区活跃度较低；对非阿里系技术栈（如微信小程序）的优化不够。"
+    },
+    {
+      "url": "https://zhihu.com/question/tongyi_vs_copilot",
+      "label": "知乎 — 通义灵码 vs Copilot",
+      "scraped_text": "高赞回答：'国内开发者用灵码最大的优势是网络——不需要翻墙，响应速度快。Copilot 在中国大陆经常连接超时，这对日常开发是致命伤。' '灵码在钉钉上的集成是国内企业市场的杀手锏——国内团队 80% 的沟通在钉钉，代码审查在钉钉完成是自然流程。' 争议：'灵码生成的代码风格偏阿里系，如果你用 Spring Cloud Alibaba 全家桶会很舒服，用其他框架时适配较差。'"
+    }
+  ],
+  "screenshots": [],
+  "metadata": {
+    "founded": 2023,
+    "funding": "阿里云内部孵化（Alibaba Group $250B+ market cap）",
+    "headquarters": "杭州, 中国",
+    "employees": "团队 ~300（阿里集团: 200K+）",
+    "last_updated": "2026-05-22"
+  }
+}
